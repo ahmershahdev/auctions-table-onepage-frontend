@@ -1,0 +1,146 @@
+MIT LICENSE - AuctionsTable
+
+Copyright (c) 2026 Syed Ahmer Shah
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+WHAT YOU CAN DO:
+✅ Use this project for personal projects
+✅ Use this project for commercial purposes
+✅ Modify the code
+✅ Distribute your own version
+✅ Include it in larger projects
+✅ Use as a template or starting point
+
+WHAT YOU MUST DO:
+📋 Include the original copyright notice
+📋 Include this license text
+📋 State significant changes made
+
+WHAT YOU CANNOT DO:
+❌ Hold the author liable for damages
+❌ Remove copyright notices
+❌ Claim you wrote the original code
+
+================================================================================
+
+ATTRIBUTION:
+
+Original Author: Syed Ahmer Shah
+Email: syedahmershahofficial@gmail.com
+LinkedIn: linkedin.com/in/syedahmershah
+Project: AuctionsTable - Live Online Auctions & Bidding Platform
+Year: 2026
+
+================================================================================
+
+TECHNOLOGIES USED (LICENSES):
+
+1. Bootstrap 5.3.2
+   License: MIT
+   URL: https://github.com/twbs/bootstrap/blob/main/LICENSE
+
+2. jQuery 3.7.1
+   License: MIT
+   URL: https://jquery.org/license/
+
+3. Google Fonts (Inter, Orbitron)
+   License: Open Font License
+   URL: https://fonts.google.com/
+
+4. Bootstrap Icons
+   License: MIT
+   URL: https://github.com/twbs/icons/blob/main/LICENSE
+
+5. Unsplash Images
+   License: Unsplash License (Free for commercial use)
+   URL: https://unsplash.com/license
+
+================================================================================
+
+THIRD-PARTY COMPONENTS:
+
+✅ All third-party libraries maintain their original licenses
+✅ All external resources are from reputable sources
+✅ CDN links are from trusted providers
+
+For detailed license information of dependencies, visit their respective websites.
+
+================================================================================
+
+IMPORTANT NOTES:
+
+1. DEMO/PROTOTYPE STATUS:
+   This is a frontend demonstration project. It includes no backend,
+   database, or real payment processing. It is suitable for:
+   - Learning and educational purposes
+   - Portfolio projects
+   - Prototyping
+   - Template basis for real projects
+
+2. NOT PRODUCTION READY:
+   For production use, you must:
+   - Add proper backend services
+   - Implement user authentication
+   - Set up database
+   - Add payment processing
+   - Implement security measures
+   - Add logging and monitoring
+
+3. DATA HANDLING:
+   This project does not collect, store, or share any user data.
+   All forms are non-functional (frontend only).
+
+4. SECURITY:
+   See SECURITY.md for security information and vulnerability
+   reporting procedures.
+
+================================================================================
+
+CONTACT & SUPPORT:
+
+For questions about this project or license:
+📧 Email: syedahmershahofficial@gmail.com
+💼 LinkedIn: linkedin.com/in/syedahmershah
+🐙 GitHub: github.com/ahmershahdev
+
+================================================================================
+
+DISCLAIMER:
+
+This software is provided "AS IS" without warranty of any kind, express or
+implied. The author is not responsible for any damages or consequences resulting
+from the use of this software.
+
+By using this software, you acknowledge that you have read this license
+agreement and agree to be bound by its terms.
+
+================================================================================
+
+License Version: 1.0
+Effective Date: February 8, 2026
+Last Updated: February 8, 2026
+
+================================================================================
+
+For the full MIT License text, see: https://opensource.org/licenses/MIT
+
+================================================================================

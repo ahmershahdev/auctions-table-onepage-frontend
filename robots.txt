@@ -1,0 +1,5 @@
+# AuctionsTable Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmershahdev.github.io/auctions-table-onepage-frontend/sitemap.xml
