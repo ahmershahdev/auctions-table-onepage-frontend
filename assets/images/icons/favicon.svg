@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0055cc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" fill="url(#bgGrad)" rx="12"/>
+  
+  <!-- Gavel Head (Hammer-like) -->
+  <rect x="35" y="28" width="30" height="22" fill="#ffffff" rx="2"/>
+  
+  <!-- Gavel Handle -->
+  <rect x="47" y="50" width="6" height="22" fill="#d4a574" rx="1"/>
+  
+  <!-- Auction Block Base -->
+  <ellipse cx="50" cy="75" rx="20" ry="8" fill="#f0f0f5" opacity="0.9"/>
+  <rect x="33" y="72" width="34" height="6" fill="#f0f0f5" opacity="0.95"/>
+  
+  <!-- Highlight on gavel -->
+  <rect x="37" y="30" width="8" height="6" fill="#ffffff" opacity="0.4" rx="1"/>
+  
+  <!-- Professional touch - small details -->
+  <circle cx="50" cy="65" r="2" fill="#0d6efd" opacity="0.6"/>
+</svg>

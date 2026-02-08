@@ -40,7 +40,7 @@
 
 #### 1. **Hero Section with Carousel**
 - Bootstrap carousel with fade transition
-- 3 dynamic hero slides from unsplash.com
+- 3 locally-hosted WebP hero images
 - Overlay with gradient background
 - Typing animation (infinite loop)
 - Call-to-action buttons
@@ -221,12 +221,17 @@ AuctionTable/
 ### External Resources
 - **Google Fonts**: Inter (body) + Orbitron (display)
 - **Bootstrap Icons**: Icon library (1100+ icons)
-- **Unsplash**: High-quality images (online links)
 - **CDN**: Bootstrap, jQuery via jsDelivr
+- **Local Assets**: 24 WebP images optimized for web
 
 ---
 
 ## 🎨 Design Theme
+
+### Logo & Favicon
+- **Favicon**: Professional SVG gavel icon representing the auction platform
+- **Loader Icon**: Hammer emoji for the preloader animation
+- **Brand Colors**: Blue (#0d6efd) and white on dark background
 
 ### Color Palette
 
