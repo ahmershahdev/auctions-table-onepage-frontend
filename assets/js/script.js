@@ -1,4 +1,30 @@
 $(document).ready(function () {
+  function showPremiumAlert(message, type = 'info', title = 'Notification', autoHide = true) {
+    const alert = $('#premiumAlert');
+    const icon = alert.find('.premium-alert-icon i');
+    const titleEl = $('#alertTitle');
+    const messageEl = $('#alertMessage');
+
+    alert.removeClass('success error info');
+
+    alert.addClass(type);
+
+    titleEl.text(title);
+    messageEl.text(message);
+
+    alert.addClass('show');
+
+    if (autoHide) {
+      setTimeout(function() {
+        hidePremiumAlert();
+      }, 4000);
+    }
+  }
+
+  window.hidePremiumAlert = function() {
+    $('#premiumAlert').removeClass('show');
+  };
+
   $('body').css('overflow', 'hidden');
 
   $(window).on('load', function () {
@@ -332,4 +358,61 @@ $(document).ready(function () {
         else if (strength == 5) $("#passwordStrength").removeClass().addClass("progress-bar bg-danger");
       });
 
+      
+      $('#newsletterForm').on('submit', function(e) {
+        e.preventDefault();
+
+        $('#newsletterSuccess').removeClass('d-none').fadeOut(0);
+        $('#newsletterError').removeClass('d-none').fadeOut(0);
+
+        const email = $('#newsletterEmail').val().trim();
+
+        if (email) {
+          $('#newsletterSuccess').fadeIn();
+          $(this)[0].reset();
+          setTimeout(function() {
+            $('#newsletterSuccess').fadeOut();
+          }, 2000);
+        } else {
+          $('#newsletterError').fadeIn();
+        }
+      });
+
+      $('#registerForm').on('submit', function(e) {
+        e.preventDefault();
+
+        const pass = $('#registerPassword').val();
+        const confirm = $('#registerConfirmPassword').val();
+
+        if (pass !== confirm) {
+          $('#errorMessage').text('Passwords must match.');
+          new bootstrap.Modal(document.getElementById('errorModal')).show();
+          return;
+        }
+
+        console.log('Registration successful');
+        $(this)[0].reset();
+      });
+
+      $('#forgotPasswordForm').on('submit', function(e) {
+        e.preventDefault();
+
+        const email = $('#forgotEmail').val().trim();
+
+        if (email) {
+          showPremiumAlert('Password reset link sent to ' + email, 'success', 'Success!');
+          $(this)[0].reset();
+          $('#forgotPasswordModal').modal('hide');
+        } else {
+          showPremiumAlert('Please enter a valid email address.', 'error', 'Error');
+        }
+      });
+
+      $('#termsLink').on('click', function(e) {
+        e.preventDefault();
+        $('#loginModal').modal('hide');
+        setTimeout(function() {
+          $('html, body').animate({ scrollTop: $('#disclaimer').offset().top - 80 }, 600);
+        }, 300);
+      });
 });

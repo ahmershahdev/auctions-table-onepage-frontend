@@ -16,8 +16,6 @@
   <meta name="author" content="AuctionsTable" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0d6efd" />
-
-
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahmershahdev.github.io/auctions-table-onepage-frontend/" />
   <meta property="og:title" content="AuctionsTable – Live Online Auctions &amp; Bidding Platform" />
@@ -628,7 +626,7 @@
     </section>
 
 
-    <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel">
       <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content bg-dark-card border-0">
           <div class="modal-header border-bottom border-secondary">
@@ -705,7 +703,7 @@
                     <i class="bi bi-box-arrow-in-right me-1"></i> Login
                   </button>
                   <p class="text-center text-light opacity-50 small mt-3 mb-0">
-                    <a href="#" class="text-primary text-decoration-none">Forgot password?</a>
+                    <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</a>
                   </p>
                 </form>
               </div>
@@ -725,7 +723,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="registerPhone" class="form-label text-light small">Phone Number</label>
-                    <input type="tel" class="form-control custom-input" id="registerPhone" name="phone"
+                    <input type="tel" class="form-control custom-input" pattern="[0-9]{11}" id="registerPhone" name="phone"
                       placeholder="+92 314 8396293" autocomplete="tel" required />
                   </div>
                   <div class="mb-3 password-field">
@@ -754,8 +752,7 @@
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" id="agreeTerms" required />
                     <label class="form-check-label text-light small" for="agreeTerms">
-                      I agree to the <a href="#disclaimer" class="text-primary text-decoration-none"
-                        data-bs-dismiss="modal">Terms & Conditions</a>
+                      I agree to the <a href="#disclaimer" class="text-primary" id="termsLink">Terms & Conditions</a>
                     </label>
                   </div>
                   <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">
@@ -766,6 +763,60 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="errorModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark-card border-0">
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title text-white fw-bold">Password Error</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-3 p-md-4 text-center">
+            <i class="bi bi-exclamation-triangle text-warning fs-1 mb-3"></i>
+            <p class="text-light" id="errorMessage">Passwords must match.</p>
+          </div>
+          <div class="modal-footer border-top border-secondary">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark-card border-0">
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title text-white fw-bold">Forgot Password</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-3 p-md-4">
+            <form id="forgotPasswordForm">
+              <div class="mb-3">
+                <label for="forgotEmail" class="form-label text-light small">Email Address</label>
+                <input type="email" class="form-control custom-input" id="forgotEmail" name="email" autocomplete="email" placeholder="your@email.com" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">Send Reset Link</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="premiumAlert" class="premium-alert">
+      <div class="premium-alert-content">
+        <div class="premium-alert-icon">
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <div class="premium-alert-text">
+          <strong id="alertTitle"></strong>
+          <p id="alertMessage"></p>
+        </div>
+        <button class="premium-alert-close" onclick="hidePremiumAlert()">
+          <i class="bi bi-x"></i>
+        </button>
       </div>
     </div>
 
@@ -971,14 +1022,14 @@
                       class="text-danger">*</span> <small class="text-light opacity-50">(Min: $100 - Max:
                       $100,000)</small></label>
                   <div class="input-group">
-                    <button type="button" class="btn btn-outline-primary" id="decreaseBtn">
+                    <button type="button" class="btn btn-outline-primary" id="decreaseBtn" aria-label="Decrease Bid Amount">
                       <i class="bi bi-dash-lg"></i>
                     </button>
                     <span class="input-group-text custom-input border-end-0 border-start-0"><i
                         class="bi bi-currency-dollar"></i></span>
-                    <input type="number" class="form-control custom-input border-start-0 border-end-0" id="bidAmount"
+                    <input type="number" class="form-control custom-input border-start-0 border-end-0" id="bidAmount" aria-label="Bid Amount"
                       name="amount" placeholder="0" min="100" max="100000" step="100" value="100" required />
-                    <button type="button" class="btn btn-outline-primary" id="increaseBtn">
+                    <button type="button" class="btn btn-outline-primary" id="increaseBtn" aria-label="Increase Bid Amount">
                       <i class="bi bi-plus-lg"></i>
                     </button>
                   </div>
@@ -1106,14 +1157,14 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label for="name" class="form-label text-light">Your Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your name"
+                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your name" autocomplete="name"
                       required />
                   </div>
                   <div class="col-md-6">
                     <label for="email" class="form-label text-light">Your Email <span
                         class="text-danger">*</span></label>
                     <input type="email" class="form-control custom-input" id="email" name="email"
-                      placeholder="you@example.com" required />
+                      placeholder="you@example.com" autocomplete="email" required />
                   </div>
                   <div class="col-12">
                     <label for="subject" class="form-label text-light">Subject <span
@@ -1231,10 +1282,18 @@
             <label for="newsletterEmail" class="visually-hidden">Email Address</label>
             <input type="email" class="form-control custom-input" id="newsletterEmail" name="email"
               placeholder="your@email.com" autocomplete="email" required />
-            <button class="btn btn-primary rounded-pill px-4 glow-btn" type="submit" aria-label="Subscribe">
+            <button class="btn btn-primary rounded-pill px-4 glow-btn" id="newsletterSubmit" type="submit" aria-label="Subscribe">
               <i class="bi bi-send"></i>
             </button>
           </form>
+          <div id="newsletterSuccess" class="alert alert-success d-none mt-3" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Success!</strong> Thank you for subscribing! You'll receive our latest updates.
+          </div>
+          <div id="newsletterError" class="alert alert-danger d-none mt-3" role="alert">
+            <i class="bi bi-exclamation-circle-fill me-2"></i>
+            <strong>Error!</strong> Please enter a valid email address.
+          </div>
         </div>
       </div>
       <hr class="border-secondary" />
