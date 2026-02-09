@@ -421,7 +421,7 @@
                 <div class="d-flex gap-2">
                   <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm btn-md-normal"
                     data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Vintage Leica Camera"
-                    data-img="assets/images/auctions/leica-camera-modal.webp" data-bid="$4,250"
+                    data-img="assets/images/auctions/vintage-camera.webp" data-bid="$4,250"
                     data-desc="Rare 1960s Leica M3 in excellent condition with original Summicron 50mm f/2 lens. Comes with original leather case and documentation. Serial number verified authentic.">
                     <i class="bi bi-eye me-1"></i> View Details
                   </button>
@@ -690,7 +690,7 @@
                       <input type="password" class="form-control custom-input password-input" id="loginPassword"
                         name="password" placeholder="Enter password" required autocomplete="current-password"
                         minlength="6" maxlength="20" autocorrect="off" autocapitalize="off" spellcheck="false" />
-                  
+
                     </div>
                   </div>
                   <div class="form-check mb-3">
@@ -701,7 +701,8 @@
                     <i class="bi bi-box-arrow-in-right me-1"></i> Login
                   </button>
                   <p class="text-center text-light opacity-50 small mt-3 mb-0">
-                    <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</a>
+                    <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal"
+                      data-bs-target="#forgotPasswordModal">Forgot password?</a>
                   </p>
                 </form>
               </div>
@@ -721,8 +722,8 @@
                   </div>
                   <div class="mb-3">
                     <label for="registerPhone" class="form-label text-light small">Phone Number</label>
-                    <input type="tel" class="form-control custom-input" pattern="[0-9]{11}" id="registerPhone" name="phone"
-                      placeholder="+92 314 8396293" autocomplete="tel" required />
+                    <input type="tel" class="form-control custom-input" pattern="[0-9]{11}" id="registerPhone"
+                      name="phone" placeholder="+92 314 8396293" autocomplete="tel" required />
                   </div>
                   <div class="mb-3 password-field">
                     <label for="registerPassword" class="form-label text-light small">Password</label>
@@ -794,7 +795,8 @@
             <form id="forgotPasswordForm">
               <div class="mb-3">
                 <label for="forgotEmail" class="form-label text-light small">Email Address</label>
-                <input type="email" class="form-control custom-input" id="forgotEmail" name="email" autocomplete="email" placeholder="your@email.com" required />
+                <input type="email" class="form-control custom-input" id="forgotEmail" name="email" autocomplete="email"
+                  placeholder="your@email.com" required />
               </div>
               <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">Send Reset Link</button>
             </form>
@@ -1020,14 +1022,17 @@
                       class="text-danger">*</span> <small class="text-light opacity-50">(Min: $100 - Max:
                       $100,000)</small></label>
                   <div class="input-group">
-                    <button type="button" class="btn btn-outline-primary" id="decreaseBtn" aria-label="Decrease Bid Amount">
+                    <button type="button" class="btn btn-outline-primary" id="decreaseBtn"
+                      aria-label="Decrease Bid Amount">
                       <i class="bi bi-dash-lg"></i>
                     </button>
                     <span class="input-group-text custom-input border-end-0 border-start-0"><i
                         class="bi bi-currency-dollar"></i></span>
-                    <input type="number" class="form-control custom-input border-start-0 border-end-0" id="bidAmount" aria-label="Bid Amount"
-                      name="amount" placeholder="0" min="100" max="100000" step="100" value="100" required />
-                    <button type="button" class="btn btn-outline-primary" id="increaseBtn" aria-label="Increase Bid Amount">
+                    <input type="number" class="form-control custom-input border-start-0 border-end-0" id="bidAmount"
+                      aria-label="Bid Amount" name="amount" placeholder="0" min="100" max="100000" step="100"
+                      value="100" required />
+                    <button type="button" class="btn btn-outline-primary" id="increaseBtn"
+                      aria-label="Increase Bid Amount">
                       <i class="bi bi-plus-lg"></i>
                     </button>
                   </div>
@@ -1155,8 +1160,8 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label for="name" class="form-label text-light">Your Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your name" autocomplete="name"
-                      required />
+                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your name"
+                      autocomplete="name" required />
                   </div>
                   <div class="col-md-6">
                     <label for="email" class="form-label text-light">Your Email <span
@@ -1241,7 +1246,7 @@
             <span class="fs-4 fw-bold text-white">Auctions<span class="text-primary">Table</span></span>
           </a>
           <p class="text-light opacity-50 small">The world's most trusted online auction platform. Connecting buyers and
-            sellers since 2010 with secure, transparent bidding.</p>
+            sellers since 2000 with secure, transparent bidding.</p>
           <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
             <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank"
               rel="noopener"><i class="bi bi-facebook"></i></a>
@@ -1280,10 +1285,12 @@
             <label for="newsletterEmail" class="visually-hidden">Email Address</label>
             <input type="email" class="form-control custom-input" id="newsletterEmail" name="email"
               placeholder="your@email.com" autocomplete="email" required />
-            <button class="btn btn-primary rounded-pill px-4 glow-btn" id="newsletterSubmit" type="submit" aria-label="Subscribe">
+            <button class="btn btn-primary rounded-pill px-4 glow-btn" id="newsletterSubmit" type="submit"
+              aria-label="Subscribe">
               <i class="bi bi-send"></i>
             </button>
           </form>
+
           <div id="newsletterSuccess" class="alert alert-success d-none mt-3" role="alert">
             <i class="bi bi-check-circle-fill me-2"></i>
             <strong>Success!</strong> Thank you for subscribing! You'll receive our latest updates.

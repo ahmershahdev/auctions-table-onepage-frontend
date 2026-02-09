@@ -1,69 +1,94 @@
 $(document).ready(function () {
-    $(document).on('click', '.nav-link.mobile-link', function (e) {
-      var target = $(this).attr('href');
-      if (target && target.startsWith('#') && $(target).length) {
-        e.preventDefault();
-        var offcanvasElement = document.getElementById('mobileMenu');
-        var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
-        if (offcanvasInstance) {
-          offcanvasInstance.hide();
-        }
-        setTimeout(function () {
-          $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 600, 'swing');
-        }, 350); 
-      }
+  const $window = $(window);
+  const $body = $("body");
+  const $htmlBody = $("html, body");
+
+  $body.css("overflow", "hidden");
+
+  function handlePreloader() {
+    $("#preloader").fadeOut(500, function () {
+      $body.css("overflow", "auto");
+      countUp();
     });
-  function showPremiumAlert(message, type = 'info', title = 'Notification', autoHide = true) {
-    const alert = $('#premiumAlert');
-    const icon = alert.find('.premium-alert-icon i');
-    const titleEl = $('#alertTitle');
-    const messageEl = $('#alertMessage');
+  }
 
-    alert.removeClass('success error info');
+  $window.on("load", handlePreloader);
+  setTimeout(handlePreloader, 2000);
 
-    alert.addClass(type);
+  function showPremiumAlert(
+    message,
+    type = "info",
+    title = "Notification",
+    autoHide = true,
+  ) {
+    const alert = $("#premiumAlert");
+    const titleEl = $("#alertTitle");
+    const messageEl = $("#alertMessage");
 
+    alert.removeClass("success error info").addClass(type + " show");
     titleEl.text(title);
     messageEl.text(message);
 
-    alert.addClass('show');
-
     if (autoHide) {
-      setTimeout(function() {
-        hidePremiumAlert();
-      }, 4000);
+      setTimeout(() => $("#premiumAlert").removeClass("show"), 4000);
     }
   }
 
-  window.hidePremiumAlert = function() {
-    $('#premiumAlert').removeClass('show');
+  window.hidePremiumAlert = function () {
+    $("#premiumAlert").removeClass("show");
   };
 
-  $('body').css('overflow', 'hidden');
+  $(document).on("click", ".nav-link.mobile-link", function (e) {
+    var target = $(this).attr("href");
+    if (target && target.startsWith("#") && $(target).length) {
+      e.preventDefault();
+      var offcanvasInstance = bootstrap.Offcanvas.getInstance(
+        document.getElementById("mobileMenu"),
+      );
+      if (offcanvasInstance) offcanvasInstance.hide();
+      setTimeout(() => {
+        $htmlBody.animate(
+          { scrollTop: $(target).offset().top - 80 },
+          600,
+          "swing",
+        );
+      }, 350);
+    }
+  });
 
-  $(window).on('load', function () {
-    $('#preloader').fadeOut(500, function () {
-      $('body').css('overflow', 'auto');
-      countUp();
+  $("#scrollTopBtn").on("click", function () {
+    $htmlBody.animate({ scrollTop: 0 }, 600, "swing");
+  });
+
+  $window.on("scroll", function () {
+    const scrollPos = $(this).scrollTop();
+
+    $("#scrollTopBtn").toggleClass("visible", scrollPos > 400);
+
+    if (scrollPos < $window.height()) {
+      $(".hero-overlay .container").css("opacity", 1 - scrollPos * 0.001);
+    }
+
+    $("section[id]").each(function () {
+      const $sec = $(this);
+      const top = $sec.offset().top;
+      const bottom = top + $sec.outerHeight();
+      const id = $sec.attr("id");
+
+      if (scrollPos + 120 >= top && scrollPos + 120 < bottom) {
+        $(".nav-link").removeClass("active");
+        $('.nav-link[href="#' + id + '"]').addClass("active");
+      }
     });
   });
 
-  setTimeout(function () {
-    $('#preloader').fadeOut(500, function () {
-      $('body').css('overflow', 'auto');
-      countUp();
-    });
-  }, 2000);
-
-
   function countUp() {
-    $('.counter').each(function () {
-      const target = parseInt($(this).data('target'));
+    $(".counter").each(function () {
       const $el = $(this);
+      const target = parseInt($el.data("target"));
       let current = 0;
       const increment = target / 30;
-
-      const interval = setInterval(function () {
+      const interval = setInterval(() => {
         current += increment;
         if (current >= target) {
           $el.text(target);
@@ -76,19 +101,19 @@ $(document).ready(function () {
   }
 
   const typingTexts = [
-    'Rare Collectibles & Fine Art',
-    'Luxury Watches & Jewelry',
-    'Vintage Cars & Electronics',
-    'Real-Time Secure Bidding',
-    'Trusted by 50,000+ Buyers'
+    "Rare Collectibles & Fine Art",
+    "Luxury Watches & Jewelry",
+    "Vintage Cars & Electronics",
+    "Real-Time Secure Bidding",
+    "Trusted by 50,000+ Buyers",
   ];
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+  let textIndex = 0,
+    charIndex = 0,
+    isDeleting = false;
 
   function typeText() {
     const currentText = typingTexts[textIndex];
-    const $el = $('#typingText');
+    const $el = $("#typingText");
 
     if (isDeleting) {
       $el.text(currentText.substring(0, charIndex - 1));
@@ -99,7 +124,6 @@ $(document).ready(function () {
     }
 
     let delay = isDeleting ? 40 : 80;
-
     if (!isDeleting && charIndex === currentText.length) {
       delay = 2000;
       isDeleting = true;
@@ -108,40 +132,19 @@ $(document).ready(function () {
       textIndex = (textIndex + 1) % typingTexts.length;
       delay = 400;
     }
-
     setTimeout(typeText, delay);
   }
   typeText();
 
-  $('.filter-btn').on('click', function () {
-    const filterValue = $(this).data('filter');
-
-    $('.filter-btn').removeClass('active btn-primary').addClass('btn-outline-light');
-    $(this).removeClass('btn-outline-light').addClass('active btn-primary');
-
-    if (filterValue === 'all') {
-      $('.auction-item').show();
-    } else {
-      $('.auction-item').each(function () {
-        if ($(this).data('category') === filterValue) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-    }
-  });
-
   function updateTimer() {
-    $('.auction-timer').each(function () {
+    $(".auction-timer").each(function () {
       const $timer = $(this);
-      let h = parseInt($timer.data('hours')) || 0;
-      let m = parseInt($timer.data('minutes')) || 0;
-      let s = parseInt($timer.data('seconds')) || 0;
+      let h = parseInt($timer.data("hours")) || 0;
+      let m = parseInt($timer.data("minutes")) || 0;
+      let s = parseInt($timer.data("seconds")) || 0;
 
-      if (s > 0) {
-        s--;
-      } else if (m > 0) {
+      if (s > 0) s--;
+      else if (m > 0) {
         m--;
         s = 59;
       } else if (h > 0) {
@@ -150,327 +153,232 @@ $(document).ready(function () {
         s = 59;
       }
 
-      $timer.data('hours', h).data('minutes', m).data('seconds', s);
-
-      const pad = (num) => String(num).padStart(2, '0');
-      $timer.text(pad(h) + ':' + pad(m) + ':' + pad(s));
+      $timer.data({ hours: h, minutes: m, seconds: s });
+      const pad = (num) => String(num).padStart(2, "0");
+      $timer.text(`${pad(h)}:${pad(m)}:${pad(s)}`);
     });
   }
-
   setInterval(updateTimer, 1000);
 
-  $('.wishlist-btn').on('click', function (e) {
+  $(".filter-btn").on("click", function () {
+    const filterValue = $(this).data("filter");
+    $(".filter-btn")
+      .removeClass("active btn-primary")
+      .addClass("btn-outline-light");
+    $(this).removeClass("btn-outline-light").addClass("active btn-primary");
+
+    if (filterValue === "all") {
+      $(".auction-item").show();
+    } else {
+      $(".auction-item").each(function () {
+        $(this).toggle($(this).data("category") === filterValue);
+      });
+    }
+  });
+
+  $(".wishlist-btn").on("click", function (e) {
     e.preventDefault();
     const $btn = $(this);
-    const $icon = $btn.find('i');
-
-    $btn.toggleClass('liked');
-
-    if ($btn.hasClass('liked')) {
-      $icon.removeClass('bi-heart').addClass('bi-heart-fill');
-    } else {
-      $icon.removeClass('bi-heart-fill').addClass('bi-heart');
-    }
+    $btn.toggleClass("liked");
+    $btn.find("i").toggleClass("bi-heart bi-heart-fill");
   });
 
-  $('#itemModal').on('show.bs.modal', function (e) {
+  $("#itemModal").on("show.bs.modal", function (e) {
     const $btn = $(e.relatedTarget);
+    const title = $btn.data("title");
 
-    const title = $btn.data('title');
-    const img = $btn.data('img');
-    const bid = $btn.data('bid');
-    const desc = $btn.data('desc');
+    $("#itemModalLabel, #modalTitle").text(title);
+    $("#modalImg").attr({ src: $btn.data("img"), alt: title });
+    $("#modalBid").text($btn.data("bid"));
+    $("#modalDesc").text($btn.data("desc"));
 
-    $('#itemModalLabel').text(title);
-    $('#modalTitle').text(title);
-    $('#modalImg').attr('src', img).attr('alt', title);
-    $('#modalBid').text(bid);
-    $('#modalDesc').text(desc);
-
-    $('#itemModal').data('item-title', title);
-    $('#itemModal').data('item-bid', bid);
+    $(this).data({ "item-title": title, "item-bid": $btn.data("bid") });
   });
 
-  $(document).on('click', '#itemModal a.btn[data-bs-dismiss="modal"]', function (e) {
-   
-    if ($(this).find('i.bi-lightning-fill').length === 0) return;
+  $(document).on(
+    "click",
+    '#itemModal a.btn[data-bs-dismiss="modal"]',
+    function (e) {
+      if ($(this).find("i.bi-lightning-fill").length === 0) return;
+      e.preventDefault();
+
+      bootstrap.Modal.getInstance(document.getElementById("itemModal")).hide();
+      setTimeout(() => {
+        if ($("#bid").length)
+          $htmlBody.animate(
+            { scrollTop: $("#bid").offset().top - 80 },
+            600,
+            "swing",
+          );
+      }, 400);
+    },
+  );
+
+  $("#loginModal").on("hide.bs.modal", () => document.body.focus());
+  $("#loginBtn").on("click", () => {
+    const offcanvasInstance = bootstrap.Offcanvas.getInstance(
+      document.getElementById("mobileMenu"),
+    );
+    if (offcanvasInstance) offcanvasInstance.hide();
+  });
+  $("#termsLink").on("click", function (e) {
     e.preventDefault();
-    var modal = bootstrap.Modal.getInstance(document.getElementById('itemModal'));
-    if (modal) modal.hide();
-    setTimeout(function () {
-
-      var $bidSection = $('#bid');
-      if ($bidSection.length) {
-        $('html, body').animate({ scrollTop: $bidSection.offset().top - 80 }, 600, 'swing');
-      }
-     
-      var itemTitle = $('#itemModal').data('item-title');
-      var bidStr = $('#itemModal').data('item-bid');
-      var bidVal = 0;
-      if (bidStr) {
-        bidVal = parseFloat(bidStr.replace(/[$,]/g, ''));
-      }
-
-      var $itemSelect = $('#bidItem');
-      if ($itemSelect.length && itemTitle) {
-        $itemSelect.val(itemTitle);
-      }
-
-      var $bidAmount = $('#bidAmount');
-      if ($bidAmount.length && bidVal) {
-        var increment = bidVal >= 1000 ? 100 : 1;
-        $bidAmount.val(Math.ceil(bidVal + increment));
-      }
-    }, 400); 
+    $("#loginModal").modal("hide");
+    setTimeout(
+      () =>
+        $htmlBody.animate(
+          { scrollTop: $("#disclaimer").offset().top - 80 },
+          600,
+        ),
+      300,
+    );
   });
 
-
-  const sections = $('section[id]');
-  
-  $(window).on('scroll', function () {
-    const scrollPos = $(this).scrollTop() + 120;
-    
-    sections.each(function () {
-      const $sec = $(this);
-      const top = $sec.offset().top;
-      const bottom = top + $sec.outerHeight();
-      const id = $sec.attr('id');
-
-      if (scrollPos >= top && scrollPos < bottom) {
-        $('#navbarNav .nav-link').removeClass('active');
-        $('#navbarNav .nav-link[href="#' + id + '"]').addClass('active');
-
-        $('#mobileMenu .nav-link').removeClass('active');
-        $('#mobileMenu .nav-link[href="#' + id + '"]').addClass('active');
-      }
-    });
-  });
-
-
-  $(window).on('scroll', function () {
-    const scrollTop = $(this).scrollTop();
-
-    if (scrollTop > 400) {
-      $('#scrollTopBtn').addClass('visible');
-    } else {
-      $('#scrollTopBtn').removeClass('visible');
-    }
-  });
-
-  $('#scrollTopBtn').on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
-  });
-
-
-  $(window).on('scroll', function () {
-    const scroll = $(this).scrollTop();
-    if (scroll < $(window).height()) {
-      $('.hero-overlay .container').css('opacity', 1 - (scroll * 0.001));
-    }
-  });
-
-
-  $('#contactForm').on('submit', function (e) {
+  $("#increaseBtn, #decreaseBtn").on("click", function (e) {
     e.preventDefault();
-
-    $('#successMsg').addClass('d-none');
-    $('#errorMsg').addClass('d-none');
-
-    const $btn = $('#submitBtn');
-    const originalText = $btn.html();
-    $btn.prop('disabled', true).html('<i class="bi bi-hourglass-split me-2"></i> Sending...');
-
-    $.ajax({
-      url: $(this).attr('action'),
-      method: 'POST',
-      data: $(this).serialize(),
-      headers: {
-        'Accept': 'application/json'
-      },
-      success: function () {
-        $('#contactForm')[0].reset();
-        $('#successMsg').removeClass('d-none');
-        $btn.prop('disabled', false).html(originalText);
-      },
-      error: function () {
-        $('#errorMsg').removeClass('d-none');
-        $btn.prop('disabled', false).html(originalText);
-      }
-    });
-  });
-
-  $('#bidBtn').on('click', function () {
-    setTimeout(function () {
-      $('html, body').animate({ scrollTop: $('#bid').offset().top - 80 }, 600, 'swing');
-    }, 100);
-  });
-
-  $('#loginBtn').on('click', function () {
-    const offcanvasElement = document.getElementById('mobileMenu');
-    const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
-    if (offcanvasInstance) {
-      offcanvasInstance.hide();
-    }
-  });
-
-  const loginModal = document.getElementById('loginModal');
-  if (loginModal) {
-    loginModal.addEventListener('hide.bs.modal', function () {
-   
-      document.body.focus();
-    });
-  }
-
-  $('#increaseBtn').on('click', function (e) {
-    e.preventDefault();
-    const $input = $('#bidAmount');
+    const $input = $("#bidAmount");
     let value = parseInt($input.val()) || 100;
-    if (value < 100000) {
-      value += 1;
-      $input.val(Math.min(value, 100000));
-    }
+    const isIncrease = $(this).attr("id") === "increaseBtn";
+
+    value = isIncrease ? Math.min(value + 1, 100000) : Math.max(value - 1, 100);
+    $input.val(value);
   });
 
-  $('#decreaseBtn').on('click', function (e) {
-    e.preventDefault();
-    const $input = $('#bidAmount');
-    let value = parseInt($input.val()) || 100;
-    if (value > 100) {
-      value -= 1;
-      $input.val(Math.max(value, 100));
-    }
-  });
-
-  $('#bidAmount').on('change', function () {
+  $("#bidAmount").on("change", function () {
     let value = parseInt($(this).val()) || 100;
-    if (value < 100) {
-      $(this).val(100);
-    } else if (value > 100000) {
-      $(this).val(100000);
-    } else {
-      $(this).val(value);
-    }
+    $(this).val(Math.min(Math.max(value, 100), 100000));
   });
 
-  $('#bidForm').on('submit', function (e) {
-    e.preventDefault();
+  $("#bidBtn").on("click", function () {
+    setTimeout(
+      () =>
+        $htmlBody.animate(
+          { scrollTop: $("#bid").offset().top - 80 },
+          600,
+          "swing",
+        ),
+      100,
+    );
+  });
 
-    $('#bidSuccess').addClass('d-none');
+  $("#bidForm").on("submit", function (e) {
+    e.preventDefault();
+    $("#bidSuccess").addClass("d-none");
 
     if (!this.checkValidity()) {
       e.stopPropagation();
-      $(this).addClass('was-validated');
+      $(this).addClass("was-validated");
       return false;
     }
 
-    const name = $('#bidName').val();
-    const email = $('#bidEmail').val();
-    const item = $('#bidItem').val();
-    const amount = $('#bidAmount').val();
-
-    console.log('Bid Placed:', { name, email, item, amount });
-
-    $('#bidSuccess').removeClass('d-none');
-
+    $("#bidSuccess").removeClass("d-none");
     $(this)[0].reset();
-    $('#bidAmount').val('100');
-    $(this).removeClass('was-validated');
-
-    setTimeout(function () {
-      $('#bidSuccess').addClass('d-none');
-    }, 5000);
-
-    return false;
+    $("#bidAmount").val("100");
+    $(this).removeClass("was-validated");
+    setTimeout(() => $("#bidSuccess").addClass("d-none"), 5000);
   });
 
-   $("#registerPassword").on("input", function () {
-        var pw = $("#registerPassword").val();
-        var strength = 0;
+  $("#registerPassword").on("input", function () {
+    const pw = $(this).val();
+    let strength = 0;
+    if (pw.length >= 7) strength++;
+    if (/[A-Z]/.test(pw)) strength++;
+    if (/[a-z]/.test(pw)) strength++;
+    if (/[0-9]/.test(pw)) strength++;
+    if (/[@$!%*?&]/.test(pw)) strength++;
 
-        if (pw.length >= 7) strength += 1;
-        if (/[A-Z]/.test(pw)) strength += 1;
-        if (/[a-z]/.test(pw)) strength += 1;
-        if (/[0-9]/.test(pw)) strength += 1;
-        if (/[@$!%*?&]/.test(pw)) strength += 1;
+    $(".progress").toggle(pw.length > 0);
 
-        if (pw.length > 0) {
-          $(".progress").show();
-        } else {
-          $(".progress").hide();
-        }
+    const classes = [
+      "bg-warning",
+      "bg-success",
+      "bg-info",
+      "bg-orange",
+      "bg-danger",
+    ];
+    $("#passwordStrength")
+      .css("width", (strength / 5) * 100 + "%")
+      .removeClass()
+      .addClass("progress-bar " + (classes[strength - 1] || ""));
+  });
 
-        var width = (strength / 5) * 100;
-        $("#passwordStrength").css("width", width + "%");
-        if (strength == 1) $("#passwordStrength").removeClass().addClass("progress-bar bg-warning");
-        else if (strength == 2) $("#passwordStrength").removeClass().addClass("progress-bar bg-success");
-        else if (strength == 3) $("#passwordStrength").removeClass().addClass("progress-bar bg-info");
-        else if (strength == 4) $("#passwordStrength").removeClass().addClass("progress-bar bg-orange");
-        else if (strength == 5) $("#passwordStrength").removeClass().addClass("progress-bar bg-danger");
-      });
+  $("#registerForm").on("submit", function (e) {
+    e.preventDefault();
+    if ($("#registerPassword").val() !== $("#registerConfirmPassword").val()) {
+      $("#errorMessage").text("Passwords must match.");
+      new bootstrap.Modal(document.getElementById("errorModal")).show();
+      return;
+    }
+    showPremiumAlert(
+      "Your account has been created!",
+      "success",
+      "Registration Successful",
+    );
+    $(this)[0].reset();
+  });
 
-      
-      $('#newsletterForm').on('submit', function(e) {
-        e.preventDefault();
+  $("#loginForm").on("submit", function (e) {
+    e.preventDefault();
+    showPremiumAlert(
+      "Account login successful!",
+      "success",
+      "Login Successful",
+    );
+    $(this)[0].reset();
+  });
 
-        $('#newsletterSuccess').removeClass('d-none').fadeOut(0);
-        $('#newsletterError').removeClass('d-none').fadeOut(0);
+  $("#forgotPasswordForm").on("submit", function (e) {
+    e.preventDefault();
+    const email = $("#forgotEmail").val().trim();
+    if (email) {
+      showPremiumAlert(
+        "Password reset link sent to " + email,
+        "success",
+        "Success!",
+      );
+      $(this)[0].reset();
+      $("#forgotPasswordModal").modal("hide");
+    } else {
+      showPremiumAlert("Please enter a valid email address.", "error", "Error");
+    }
+  });
 
-        const email = $('#newsletterEmail').val().trim();
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault();
+    $("#successMsg, #errorMsg").addClass("d-none");
+    const $btn = $("#submitBtn");
+    const originalText = $btn.html();
+    $btn
+      .prop("disabled", true)
+      .html('<i class="bi bi-hourglass-split me-2"></i> Sending...');
 
-        if (email) {
-          $('#newsletterSuccess').fadeIn();
-          $(this)[0].reset();
-          setTimeout(function() {
-            $('#newsletterSuccess').fadeOut();
-          }, 2000);
-        } else {
-          $('#newsletterError').fadeIn();
-        }
-      });
+    $.ajax({
+      url: $(this).attr("action"),
+      method: "POST",
+      data: $(this).serialize(),
+      headers: { Accept: "application/json" },
+      success: function () {
+        $("#contactForm")[0].reset();
+        $("#successMsg").removeClass("d-none");
+      },
+      error: function () {
+        $("#errorMsg").removeClass("d-none");
+      },
+      complete: function () {
+        $btn.prop("disabled", false).html(originalText);
+      },
+    });
+  });
 
-
-      $('#registerForm').on('submit', function(e) {
-        e.preventDefault();
-
-        const pass = $('#registerPassword').val();
-        const confirm = $('#registerConfirmPassword').val();
-
-        if (pass !== confirm) {
-          $('#errorMessage').text('Passwords must match.');
-          new bootstrap.Modal(document.getElementById('errorModal')).show();
-          return;
-        }
-
-        showPremiumAlert('Your account has been created!', 'success', 'Registration Successful');
-        $(this)[0].reset();
-      });
-
-      $('#loginForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        showPremiumAlert('Account login successful!', 'success', 'Login Successful');
-        $(this)[0].reset();
-      });
-
-      $('#forgotPasswordForm').on('submit', function(e) {
-        e.preventDefault();
-
-        const email = $('#forgotEmail').val().trim();
-
-        if (email) {
-          showPremiumAlert('Password reset link sent to ' + email, 'success', 'Success!');
-          $(this)[0].reset();
-          $('#forgotPasswordModal').modal('hide');
-        } else {
-          showPremiumAlert('Please enter a valid email address.', 'error', 'Error');
-        }
-      });
-
-      $('#termsLink').on('click', function(e) {
-        e.preventDefault();
-        $('#loginModal').modal('hide');
-        setTimeout(function() {
-          $('html, body').animate({ scrollTop: $('#disclaimer').offset().top - 80 }, 600);
-        }, 300);
-      });
+  $("#newsletterForm").on("submit", function (e) {
+    e.preventDefault();
+    const email = $("#newsletterEmail").val().trim();
+    if (email) {
+      $("#newsletterSuccess").removeClass("d-none");
+      setTimeout(() => $("#newsletterSuccess").addClass("d-none"), 4000);
+      $(this)[0].reset();
+    } else {
+      $("#newsletterError").removeClass("d-none");
+    }
+  });
 });
