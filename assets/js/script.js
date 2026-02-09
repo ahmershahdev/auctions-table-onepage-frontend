@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    $(document).on('click', '.nav-link.mobile-link', function (e) {
+      var target = $(this).attr('href');
+      if (target && target.startsWith('#') && $(target).length) {
+        e.preventDefault();
+        var offcanvasElement = document.getElementById('mobileMenu');
+        var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+        if (offcanvasInstance) {
+          offcanvasInstance.hide();
+        }
+        setTimeout(function () {
+          $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 600, 'swing');
+        }, 350); 
+      }
+    });
   function showPremiumAlert(message, type = 'info', title = 'Notification', autoHide = true) {
     const alert = $('#premiumAlert');
     const icon = alert.find('.premium-alert-icon i');
@@ -172,6 +186,42 @@ $(document).ready(function () {
     $('#modalImg').attr('src', img).attr('alt', title);
     $('#modalBid').text(bid);
     $('#modalDesc').text(desc);
+
+    $('#itemModal').data('item-title', title);
+    $('#itemModal').data('item-bid', bid);
+  });
+
+  $(document).on('click', '#itemModal a.btn[data-bs-dismiss="modal"]', function (e) {
+   
+    if ($(this).find('i.bi-lightning-fill').length === 0) return;
+    e.preventDefault();
+    var modal = bootstrap.Modal.getInstance(document.getElementById('itemModal'));
+    if (modal) modal.hide();
+    setTimeout(function () {
+
+      var $bidSection = $('#bid');
+      if ($bidSection.length) {
+        $('html, body').animate({ scrollTop: $bidSection.offset().top - 80 }, 600, 'swing');
+      }
+     
+      var itemTitle = $('#itemModal').data('item-title');
+      var bidStr = $('#itemModal').data('item-bid');
+      var bidVal = 0;
+      if (bidStr) {
+        bidVal = parseFloat(bidStr.replace(/[$,]/g, ''));
+      }
+
+      var $itemSelect = $('#bidItem');
+      if ($itemSelect.length && itemTitle) {
+        $itemSelect.val(itemTitle);
+      }
+
+      var $bidAmount = $('#bidAmount');
+      if ($bidAmount.length && bidVal) {
+        var increment = bidVal >= 1000 ? 100 : 1;
+        $bidAmount.val(Math.ceil(bidVal + increment));
+      }
+    }, 400); 
   });
 
 
@@ -378,6 +428,7 @@ $(document).ready(function () {
         }
       });
 
+
       $('#registerForm').on('submit', function(e) {
         e.preventDefault();
 
@@ -390,7 +441,14 @@ $(document).ready(function () {
           return;
         }
 
-        console.log('Registration successful');
+        showPremiumAlert('Your account has been created!', 'success', 'Registration Successful');
+        $(this)[0].reset();
+      });
+
+      $('#loginForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        showPremiumAlert('Account login successful!', 'success', 'Login Successful');
         $(this)[0].reset();
       });
 
