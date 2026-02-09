@@ -194,14 +194,142 @@ $(document).ready(function () {
   });
 
 
-  $('.offcanvas-login-btn').on('click', function (e) {
+  $('#contactForm').on('submit', function (e) {
     e.preventDefault();
+
+    $('#successMsg').addClass('d-none');
+    $('#errorMsg').addClass('d-none');
+
+    const $btn = $('#submitBtn');
+    const originalText = $btn.html();
+    $btn.prop('disabled', true).html('<i class="bi bi-hourglass-split me-2"></i> Sending...');
+
+    $.ajax({
+      url: $(this).attr('action'),
+      method: 'POST',
+      data: $(this).serialize(),
+      headers: {
+        'Accept': 'application/json'
+      },
+      success: function () {
+        $('#contactForm')[0].reset();
+        $('#successMsg').removeClass('d-none');
+        $btn.prop('disabled', false).html(originalText);
+      },
+      error: function () {
+        $('#errorMsg').removeClass('d-none');
+        $btn.prop('disabled', false).html(originalText);
+      }
+    });
+  });
+
+  $('#bidBtn').on('click', function () {
+    setTimeout(function () {
+      $('html, body').animate({ scrollTop: $('#bid').offset().top - 80 }, 600, 'swing');
+    }, 100);
+  });
+
+  $('#loginBtn').on('click', function () {
     const offcanvasElement = document.getElementById('mobileMenu');
     const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
-    
     if (offcanvasInstance) {
       offcanvasInstance.hide();
     }
   });
+
+  const loginModal = document.getElementById('loginModal');
+  if (loginModal) {
+    loginModal.addEventListener('hide.bs.modal', function () {
+   
+      document.body.focus();
+    });
+  }
+
+  $('#increaseBtn').on('click', function (e) {
+    e.preventDefault();
+    const $input = $('#bidAmount');
+    let value = parseInt($input.val()) || 100;
+    if (value < 100000) {
+      value += 1;
+      $input.val(Math.min(value, 100000));
+    }
+  });
+
+  $('#decreaseBtn').on('click', function (e) {
+    e.preventDefault();
+    const $input = $('#bidAmount');
+    let value = parseInt($input.val()) || 100;
+    if (value > 100) {
+      value -= 1;
+      $input.val(Math.max(value, 100));
+    }
+  });
+
+  $('#bidAmount').on('change', function () {
+    let value = parseInt($(this).val()) || 100;
+    if (value < 100) {
+      $(this).val(100);
+    } else if (value > 100000) {
+      $(this).val(100000);
+    } else {
+      $(this).val(value);
+    }
+  });
+
+  $('#bidForm').on('submit', function (e) {
+    e.preventDefault();
+
+    $('#bidSuccess').addClass('d-none');
+
+    if (!this.checkValidity()) {
+      e.stopPropagation();
+      $(this).addClass('was-validated');
+      return false;
+    }
+
+    const name = $('#bidName').val();
+    const email = $('#bidEmail').val();
+    const item = $('#bidItem').val();
+    const amount = $('#bidAmount').val();
+
+    console.log('Bid Placed:', { name, email, item, amount });
+
+    $('#bidSuccess').removeClass('d-none');
+
+    $(this)[0].reset();
+    $('#bidAmount').val('100');
+    $(this).removeClass('was-validated');
+
+    setTimeout(function () {
+      $('#bidSuccess').addClass('d-none');
+    }, 5000);
+
+    return false;
+  });
+
+   $("#registerPassword").on("input", function () {
+        var pw = $("#registerPassword").val();
+        var strength = 0;
+
+        if (pw.length >= 7) strength += 1;
+        if (/[A-Z]/.test(pw)) strength += 1;
+        if (/[a-z]/.test(pw)) strength += 1;
+        if (/[0-9]/.test(pw)) strength += 1;
+        if (/[@$!%*?&]/.test(pw)) strength += 1;
+
+        if (pw.length > 0) {
+          $(".progress").show();
+        } else {
+          $(".progress").hide();
+        }
+
+        var width = (strength / 5) * 100;
+        $("#passwordStrength").css("width", width + "%");
+        if (strength == 1) $("#passwordStrength").removeClass().addClass("progress-bar bg-warning");
+        else if (strength == 2) $("#passwordStrength").removeClass().addClass("progress-bar bg-success");
+        else if (strength == 3) $("#passwordStrength").removeClass().addClass("progress-bar bg-info");
+        else if (strength == 4) $("#passwordStrength").removeClass().addClass("progress-bar bg-orange");
+        else if (strength == 5) $("#passwordStrength").removeClass().addClass("progress-bar bg-danger");
+      });
 
 });

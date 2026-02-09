@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
-  <title>AuctionsTable |git Live Online Auctions &amp; Bidding Platform</title>
+
+  <title>AuctionsTable | Live Online Auctions &amp; Bidding Platform</title>
   <meta name="title" content="AuctionsTable – Live Online Auctions &amp; Bidding Platform" />
-  <meta name="description" content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable. Real-time bidding, secure payments, trusted sellers." />
-  <meta name="keywords" content="auctions, online bidding, live auctions, auction house, bid, collectibles, electronics auction, art auction, rare items, auction platform" />
+  <meta name="description"
+    content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable. Real-time bidding, secure payments, trusted sellers." />
+  <meta name="keywords"
+    content="auctions, online bidding, live auctions, auction house, bid, collectibles, electronics auction, art auction, rare items, auction platform" />
   <meta name="author" content="AuctionsTable" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0d6efd" />
 
-  
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahmershahdev.github.io/auctions-table-onepage-frontend/" />
   <meta property="og:title" content="AuctionsTable – Live Online Auctions &amp; Bidding Platform" />
-  <meta property="og:description" content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable." />
+  <meta property="og:description"
+    content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable." />
   <meta property="og:image" content="assets/images/hero/hero-1.webp" />
   <meta property="og:site_name" content="AuctionsTable" />
 
-  
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://ahmershahdev.github.io/auctions-table-onepage-frontend/" />
   <meta name="twitter:title" content="AuctionsTable – Live Online Auctions &amp; Bidding Platform" />
-  <meta name="twitter:description" content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable." />
+  <meta name="twitter:description"
+    content="Discover exclusive live auctions, bid on rare collectibles, electronics, art &amp; more at AuctionsTable." />
   <meta name="twitter:image" content="assets/images/hero/hero-1.webp" />
 
-  
+
   <link rel="canonical" href="https://ahmershahdev.github.io/auctions-table-onepage-frontend/" />
 
-  
+
   <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg" />
 
-  
+
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet" />
-  
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -82,9 +89,10 @@
   }
   </script>
 </head>
+
 <body data-bs-spy="scrollspy" data-bs-target="#mainNav" data-bs-offset="100">
 
-  
+
   <div id="preloader">
     <div class="loader">
       <div class="hammer-icon">🔨</div>
@@ -92,7 +100,7 @@
     </div>
   </div>
 
-  
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
@@ -100,12 +108,13 @@
         <span class="brand-text">Auctions<span class="text-primary">Table</span></span>
       </a>
 
-      
-      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      
+
       <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
         <ul class="navbar-nav ms-auto gap-1">
           <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
@@ -117,14 +126,15 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <div class="d-flex gap-2 ms-3">
-          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</a>
           <a href="#bid" class="btn btn-primary btn-sm px-4 rounded-pill glow-btn">Place Bid</a>
         </div>
       </div>
     </div>
   </nav>
 
-  
+
   <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="mobileMenuLabel">
@@ -134,887 +144,1045 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav gap-2">
-        <li class="nav-item"><a class="nav-link mobile-link" href="#home" data-bs-dismiss="offcanvas"><i class="bi bi-house me-2"></i>Home</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#categories" data-bs-dismiss="offcanvas"><i class="bi bi-grid me-2"></i>Categories</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#active-auctions" data-bs-dismiss="offcanvas"><i class="bi bi-lightning me-2"></i>Live Auctions</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#completed" data-bs-dismiss="offcanvas"><i class="bi bi-check-circle me-2"></i>Completed</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#bid" data-bs-dismiss="offcanvas"><i class="bi bi-cash-stack me-2"></i>Bid Now</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#about" data-bs-dismiss="offcanvas"><i class="bi bi-info-circle me-2"></i>About</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#contact" data-bs-dismiss="offcanvas"><i class="bi bi-envelope me-2"></i>Contact</a></li>
-        <li class="nav-item"><a class="nav-link mobile-link" href="#disclaimer" data-bs-dismiss="offcanvas"><i class="bi bi-shield-check me-2"></i>Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#home" data-bs-dismiss="offcanvas"><i
+              class="bi bi-house me-2"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#categories" data-bs-dismiss="offcanvas"><i
+              class="bi bi-grid me-2"></i>Categories</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#active-auctions" data-bs-dismiss="offcanvas"><i
+              class="bi bi-lightning me-2"></i>Live Auctions</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#completed" data-bs-dismiss="offcanvas"><i
+              class="bi bi-check-circle me-2"></i>Completed</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#bid" data-bs-dismiss="offcanvas"><i
+              class="bi bi-cash-stack me-2"></i>Bid Now</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#about" data-bs-dismiss="offcanvas"><i
+              class="bi bi-info-circle me-2"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#contact" data-bs-dismiss="offcanvas"><i
+              class="bi bi-envelope me-2"></i>Contact</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#disclaimer" data-bs-dismiss="offcanvas"><i
+              class="bi bi-shield-check me-2"></i>Disclaimer</a></li>
       </ul>
       <hr class="border-secondary my-4" />
       <div class="d-grid gap-2 mb-3">
-        <a href="#" class="btn btn-outline-primary rounded-pill offcanvas-login-btn">
+        <button type="button" class="btn btn-outline-primary rounded-pill" id="loginBtn" data-bs-toggle="modal"
+          data-bs-target="#loginModal">
           <i class="bi bi-person-circle me-1"></i> Login / Register
-        </a>
-        <a href="#bid" class="btn btn-primary rounded-pill glow-btn" data-bs-dismiss="offcanvas">
+        </button>
+        <button type="button" class="btn btn-primary rounded-pill glow-btn" id="bidBtn" data-bs-dismiss="offcanvas">
           <i class="bi bi-lightning-fill me-1"></i> Place Bid Now
-        </a>
+        </button>
       </div>
       <div class="mt-4 d-flex gap-3 justify-content-center">
-        <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank"
+          rel="noopener"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank"
+          rel="noopener"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram" target="_blank"
+          rel="noopener"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn" target="_blank"
+          rel="noopener"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </div>
 
   <main>
-  
-  <section id="home" class="hero-section">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/hero/hero-1.webp" class="d-block w-100 hero-img" alt="Luxury auction hall" />
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/hero/hero-2.webp" class="d-block w-100 hero-img" alt="Rare collectibles" />
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/hero/hero-3.webp" class="d-block w-100 hero-img" alt="Online bidding" />
-        </div>
-      </div>
-      
-      <div class="hero-overlay">
-        <div class="container text-center">
-          <span class="badge bg-primary bg-opacity-75 rounded-pill px-3 px-md-4 py-2 mb-2 mb-md-3 animate__fadeInDown">
-            <i class="bi bi-lightning-fill me-1"></i> Live Auctions Now
-          </span>
-          <h1 class="display-3 fw-900 text-white mb-2 mb-md-3">
-            Bid. Win. <span class="text-primary">Own.</span>
-          </h1>
-          <div class="typing-wrapper mb-2 mb-md-4"-delay="200">
-            <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
-          </div>
-          <p class="lead text-light opacity-75 mx-auto mb-3 mb-md-4 px-2 px-md-0" style="max-width:600px; user-select: text;" -delay="300">
-            Discover exclusive items, place real-time bids, and win rare treasures from the world's most trusted auction platform.
-          </p>
-          <div class="d-flex gap-2 gap-md-3 justify-content-center flex-wrap"-delay="400">
-            <a href="#active-auctions" class="btn btn-primary btn-lg rounded-pill px-3 px-md-5 glow-btn">
-              <i class="bi bi-lightning-fill me-1"></i> Explore Auctions
-            </a>
-            <a href="#bid" class="btn btn-outline-light btn-lg rounded-pill px-3 px-md-5">
-              <i class="bi bi-cash-stack me-1"></i> Place a Bid
-            </a>
-          </div>
-          
-          <div class="row g-2 g-md-4 mt-3 mt-md-5 justify-content-center"-delay="500">
-            <div class="col-6 col-md-3">
-              <div class="stat-card">
-                <div class="fw-bold text-primary counter" data-target="12500" style="font-size: 2.5rem; line-height: 1.2;">0</div>
-                <small class="text-light opacity-75">Items Auctioned</small>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card">
-                <div class="fw-bold text-primary counter" data-target="8400" style="font-size: 2.5rem; line-height: 1.2;">0</div>
-                <small class="text-light opacity-75">Active Bidders</small>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card">
-                <div class="fw-bold text-primary counter" data-target="950" style="font-size: 2.5rem; line-height: 1.2;">0</div>
-                <small class="text-light opacity-75">Live Auctions</small>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card">
-                <div class="fw-bold text-primary counter" data-target="99" style="font-size: 2.5rem; line-height: 1.2;">0</div>
-                <small class="text-light opacity-75">% Satisfaction</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </section>
 
-  
-  <section id="categories" class="py-4 py-md-5 section-dark">
-    <div class="container py-3 py-md-5">
-      <div class="text-center mb-4 mb-md-5">
-        <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Categories</span>
-        <h2 class="display-5 fw-bold text-white">Explore Auction <span class="text-primary">Categories</span></h2>
-        <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">Browse through our curated categories and find the perfect item to bid on.</p>
-      </div>
-      <div class="row g-3 g-md-4">
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="100">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/electronics.webp" alt="Electronics" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Electronics</h3>
-            <small class="text-primary">234 Items</small>
-          </div>
+    <section id="home" class="hero-section">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="150">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/art.webp" alt="Art & Paintings" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Art &amp; Paintings</h3>
-            <small class="text-primary">189 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="200">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/real-estate.webp" alt="Real Estate" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Real Estate</h3>
-            <small class="text-primary">76 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="250">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/vehicles.webp" alt="Vehicles" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Vehicles</h3>
-            <small class="text-primary">142 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="300">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/jewelry.webp" alt="Jewelry" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Jewelry</h3>
-            <small class="text-primary">310 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="350">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/fashion.webp" alt="Fashion" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Fashion</h3>
-            <small class="text-primary">208 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="400">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/watches.webp" alt="Watches" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Watches</h3>
-            <small class="text-primary">167 Items</small>
-          </div>
-        </div>
-        
-        <div class="col-6 col-md-4 col-lg-3"-delay="450">
-          <div class="category-card text-center p-3 p-md-4">
-            <div class="category-icon mb-2 mb-md-3">
-              <img src="assets/images/categories/antiques.webp" alt="Antiques" class="rounded-circle" />
-            </div>
-            <h3 class="h6 text-white fw-semibold mb-0">Antiques</h3>
-            <small class="text-primary">95 Items</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="active-auctions" class="py-4 py-md-5 section-gradient">
-    <div class="container py-3 py-md-5">
-      <div class="text-center mb-4 mb-md-5">
-        <span class="badge bg-danger rounded-pill px-3 py-2 mb-2 pulse-badge">
-          <i class="bi bi-broadcast me-1"></i> LIVE
-        </span>
-        <h2 class="display-5 fw-bold text-white">Active <span class="text-primary">Auctions</span></h2>
-        <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">These items are live right now. Place your bid before time runs out!</p>
-      </div>
-
-      
-      <div class="d-flex gap-2 justify-content-center flex-wrap mb-4 mb-md-5">
-        <button class="btn btn-primary btn-sm rounded-pill px-3 px-md-4 filter-btn active" data-filter="all">All</button>
-        <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn" data-filter="electronics">Electronics</button>
-        <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn" data-filter="art">Art</button>
-        <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn" data-filter="jewelry">Jewelry</button>
-        <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn" data-filter="vehicles">Vehicles</button>
-      </div>
-
-      <div class="row g-3 g-md-4" id="auctionGrid">
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="electronics"-delay="100">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/vintage-camera.webp" alt="Vintage Camera" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="2" data-minutes="15" data-seconds="30">02:15:30</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">Vintage Leica Camera</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">Rare 1960s Leica M3 in excellent condition with original lens.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$4,250</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">23</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm btn-md-normal" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Vintage Leica Camera" data-img="assets/images/auctions/leica-camera-modal.webp" data-bid="$4,250" data-desc="Rare 1960s Leica M3 in excellent condition with original Summicron 50mm f/2 lens. Comes with original leather case and documentation. Serial number verified authentic.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="art"-delay="200">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/abstract-painting.webp" alt="Abstract Painting" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="5" data-minutes="42" data-seconds="10">05:42:10</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">Abstract Oil Painting</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">Contemporary abstract art by renowned artist Marcus Wei.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$12,800</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">47</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Abstract Oil Painting" data-img="assets/images/auctions/abstract-painting.webp" data-bid="$12,800" data-desc="Stunning large-scale abstract oil on canvas by Marcus Wei, 2024. Dimensions: 48x72 inches. Museum-quality piece with certificate of authenticity. Featured in Basel Art Fair 2024.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="jewelry"-delay="300">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/diamond-ring.webp" alt="Diamond Ring" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="1" data-minutes="8" data-seconds="55">01:08:55</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">4ct Diamond Ring</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">Platinum set, GIA certified, VS1 clarity, D color.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$38,500</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">61</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="4ct Diamond Ring" data-img="assets/images/auctions/diamond-ring.webp" data-bid="$38,500" data-desc="Exquisite 4.02 carat round brilliant diamond set in platinum. GIA Report: VS1 Clarity, D Color, Excellent Cut. Triple excellent. Includes GIA certificate and premium gift box.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="vehicles"-delay="100">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/classic-car.webp" alt="Classic Car" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="8" data-minutes="30" data-seconds="0">08:30:00</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">1967 Ferrari 275 GTB</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">Fully restored classic Ferrari with matching numbers.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$2.4M</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">15</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="1967 Ferrari 275 GTB" data-img="assets/images/auctions/classic-car.webp" data-bid="$2,400,000" data-desc="Matching numbers 1967 Ferrari 275 GTB/4 in Rosso Corsa over Tan leather. Classiche certified. Concours-ready condition with complete history file. Previously exhibited at Pebble Beach.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="electronics"-delay="200">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/signed-guitar.webp" alt="Signed Guitar" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="3" data-minutes="52" data-seconds="20">03:52:20</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">Signed Fender Stratocaster</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">Signed by Jimi Hendrix estate, limited edition.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$18,750</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">34</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Signed Fender Stratocaster" data-img="assets/images/auctions/signed-guitar.webp" data-bid="$18,750" data-desc="Limited edition Fender Stratocaster with authenticated signature from the Jimi Hendrix estate. Sunburst finish, maple neck. Includes hardshell case and certificate of authenticity. #42 of 100.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="art"-delay="300">
-          <div class="auction-card">
-            <div class="auction-img-wrapper">
-              <img src="assets/images/auctions/sculpture.webp" alt="Sculpture" class="auction-img" />
-              <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i class="bi bi-broadcast me-1"></i>LIVE</span>
-              <div class="auction-timer" data-hours="6" data-minutes="11" data-seconds="45">06:11:45</div>
-              <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-            </div>
-            <div class="auction-body p-3 p-md-4">
-              <h3 class="h5 text-white fw-bold mb-1">Bronze Sculpture – The Thinker</h3>
-              <p class="text-light opacity-50 small mb-2 mb-md-3">19th-century authorized reproduction, Barbedienne foundry.</p>
-              <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
-                <div>
-                  <small class="text-light opacity-50">Current Bid</small>
-                  <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$7,900</div>
-                </div>
-                <div class="text-end">
-                  <small class="text-light opacity-50">Total Bids</small>
-                  <div class="text-white mb-0" style="font-size: 1.125rem;">19</div>
-                </div>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Bronze Sculpture – The Thinker" data-img="assets/images/auctions/sculpture.webp" data-bid="$7,900" data-desc="Authorized 19th-century bronze reproduction of Rodin's 'The Thinker' by Barbedienne foundry. Height: 28 inches. Foundry mark present. Provenance documented from a private European collection.">
-                  <i class="bi bi-eye me-1"></i> View Details
-                </button>
-                <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content bg-dark-card border-0">
-        <div class="modal-header border-bottom border-secondary">
-          <h5 class="modal-title text-white fw-bold" id="itemModalLabel">Item Details</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <img src="" alt="Item Image" id="modalImg" class="w-100" style="max-height:350px;object-fit:cover;" />
-          <div class="p-3 p-md-4">
-            <h4 class="text-white fw-bold" id="modalTitle"></h4>
-            <p class="text-light opacity-75 mt-3" id="modalDesc"></p>
-            <hr class="border-secondary" />
-            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
-              <div>
-                <small class="text-light opacity-50">Current Bid</small>
-                <h3 class="text-primary fw-bold mb-0" id="modalBid"></h3>
-              </div>
-              <a href="#bid" class="btn btn-primary rounded-pill px-4 px-md-5 glow-btn" data-bs-dismiss="modal">
-                <i class="bi bi-lightning-fill me-1"></i> Place Bid
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark-card border-0">
-        <div class="modal-header border-bottom border-secondary">
-          <h5 class="modal-title text-white fw-bold" id="loginModalLabel">Account Access</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-3 p-md-4">
-          
-          <ul class="nav nav-pills mb-4 justify-content-center" id="authTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login-panel" type="button" role="tab">Login</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register-panel" type="button" role="tab">Register</button>
-            </li>
-          </ul>
-
-          
-          <div class="tab-content" id="authTabContent">
-            
-            <div class="tab-pane fade show active" id="login-panel" role="tabpanel">
-              <form id="loginForm">
-                <div class="mb-3">
-                  <label for="loginEmail" class="form-label text-light small">Email Address</label>
-                  <input type="email" class="form-control custom-input" id="loginEmail" name="email" placeholder="your@email.com" autocomplete="email" required />
-                </div>
-                <div class="mb-3">
-                  <label for="loginPassword" class="form-label text-light small">Password</label>
-                  <input type="password" class="form-control custom-input" id="loginPassword" name="password" placeholder="Enter password" autocomplete="current-password" required />
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="checkbox" id="rememberMe" />
-                  <label class="form-check-label text-light small" for="rememberMe">Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">
-                  <i class="bi bi-box-arrow-in-right me-1"></i> Login
-                </button>
-                <p class="text-center text-light opacity-50 small mt-3 mb-0">
-                  <a href="#" class="text-primary text-decoration-none">Forgot password?</a>
-                </p>
-              </form>
-            </div>
-
-            
-            <div class="tab-pane fade" id="register-panel" role="tabpanel">
-              <form id="registerForm">
-                <div class="mb-3">
-                  <label for="registerName" class="form-label text-light small">Full Name</label>
-                  <input type="text" class="form-control custom-input" id="registerName" name="name" placeholder="Ahmer Shah" autocomplete="name" required />
-                </div>
-                <div class="mb-3">
-                  <label for="registerEmail" class="form-label text-light small">Email Address</label>
-                  <input type="email" class="form-control custom-input" id="registerEmail" name="email" placeholder="your@email.com" autocomplete="email" required />
-                </div>
-                <div class="mb-3">
-                  <label for="registerPhone" class="form-label text-light small">Phone Number</label>
-                  <input type="tel" class="form-control custom-input" id="registerPhone" name="phone" placeholder="+92 314 8396293" autocomplete="tel" required />
-                </div>
-                <div class="mb-3">
-                  <label for="registerPassword" class="form-label text-light small">Password</label>
-                  <input type="password" class="form-control custom-input" id="registerPassword" name="password" placeholder="Create password" autocomplete="new-password" required />
-                </div>
-                <div class="mb-3">
-                  <label for="registerConfirmPassword" class="form-label text-light small">Confirm Password</label>
-                  <input type="password" class="form-control custom-input" id="registerConfirmPassword" name="confirmPassword" placeholder="Confirm password" autocomplete="new-password" required />
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="checkbox" id="agreeTerms" required />
-                  <label class="form-check-label text-light small" for="agreeTerms">
-                    I agree to the <a href="#disclaimer" class="text-primary text-decoration-none" data-bs-dismiss="modal">Terms & Conditions</a>
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">
-                  <i class="bi bi-person-plus me-1"></i> Create Account
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <section id="completed" class="py-4 py-md-5 section-dark">
-    <div class="container py-3 py-md-5">
-      <div class="text-center mb-4 mb-md-5">
-        <span class="badge bg-success bg-opacity-25 text-success rounded-pill px-3 py-2 mb-2">
-          <i class="bi bi-check-circle me-1"></i> Completed
-        </span>
-        <h2 class="display-5 fw-bold text-white">Recently <span class="text-primary">Completed</span></h2>
-        <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">These auctions have ended. Check out the winning bids!</p>
-      </div>
-
-      <div id="completedCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row g-3 g-md-4 justify-content-center">
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/rolex-watch.webp" alt="Rolex Watch" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">Rolex Daytona 1969</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$245,000</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">j***n82</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/wine-collection.webp" alt="Wine Collection" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">Chateau Lafite Collection</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$18,400</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">m***a55</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/nft-art.webp" alt="NFT Art" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">Digital Art – Neon Dreams</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$5,200</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">k***z19</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="assets/images/hero/hero-1.webp" class="d-block w-100 hero-img" alt="Luxury auction hall" />
           </div>
           <div class="carousel-item">
-            <div class="row g-3 g-md-4 justify-content-center">
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/jordan-jersey.webp" alt="Basketball Memorabilia" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">Signed Jordan Jersey</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$32,000</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">b***x44</span></div>
-                    </div>
-                  </div>
+            <img src="assets/images/hero/hero-2.webp" class="d-block w-100 hero-img" alt="Rare collectibles" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/hero/hero-3.webp" class="d-block w-100 hero-img" alt="Online bidding" />
+          </div>
+        </div>
+
+        <div class="hero-overlay">
+          <div class="container text-center">
+            <span
+              class="badge bg-primary bg-opacity-75 rounded-pill px-3 px-md-4 py-2 mb-2 mb-md-3 animate__fadeInDown">
+              <i class="bi bi-lightning-fill me-1"></i> Live Auctions Now
+            </span>
+            <h1 class="display-3 fw-900 text-white mb-2 mb-md-3">
+              Bid. Win. <span class="text-primary">Own.</span>
+            </h1>
+            <div class="typing-wrapper mb-2 mb-md-4" -delay="200">
+              <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+            </div>
+            <p class="lead text-light opacity-75 mx-auto mb-3 mb-md-4 px-2 px-md-0"
+              style="max-width:600px; user-select: text;" -delay="300">
+              Discover exclusive items, place real-time bids, and win rare treasures from the world's most trusted
+              auction platform.
+            </p>
+            <div class="d-flex gap-2 gap-md-3 justify-content-center flex-wrap" -delay="400">
+              <a href="#active-auctions" class="btn btn-primary btn-lg rounded-pill px-3 px-md-5 glow-btn">
+                <i class="bi bi-lightning-fill me-1"></i> Explore Auctions
+              </a>
+              <a href="#bid" class="btn btn-outline-light btn-lg rounded-pill px-3 px-md-5">
+                <i class="bi bi-cash-stack me-1"></i> Place a Bid
+              </a>
+            </div>
+
+            <div class="row g-2 g-md-4 mt-3 mt-md-5 justify-content-center" -delay="500">
+              <div class="col-6 col-md-3">
+                <div class="stat-card">
+                  <div class="fw-bold text-primary counter" data-target="12500"
+                    style="font-size: 2.5rem; line-height: 1.2;">0</div>
+                  <small class="text-light opacity-75">Items Auctioned</small>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/toy-robot.webp" alt="Vintage Toy" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">1950s Tin Robot Toy</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$3,800</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">r***t77</span></div>
-                    </div>
-                  </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-card">
+                  <div class="fw-bold text-primary counter" data-target="8400"
+                    style="font-size: 2.5rem; line-height: 1.2;">0</div>
+                  <small class="text-light opacity-75">Active Bidders</small>
                 </div>
               </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="completed-card">
-                  <div class="completed-img-wrapper">
-                    <img src="assets/images/completed/great-gatsby-book.webp" alt="Rare Book" class="completed-img" />
-                    <span class="badge bg-success position-absolute top-0 start-0 m-3">SOLD</span>
-                  </div>
-                  <div class="p-3 p-md-4">
-                    <h3 class="h6 text-white fw-bold mb-0">First Edition – The Great Gatsby</h3>
-                    <div class="d-flex justify-content-between mt-2">
-                      <div><small class="text-light opacity-50">Final Price</small><br /><span class="text-primary fw-bold">$162,500</span></div>
-                      <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span class="text-white">l***e03</span></div>
-                    </div>
-                  </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-card">
+                  <div class="fw-bold text-primary counter" data-target="950"
+                    style="font-size: 2.5rem; line-height: 1.2;">0</div>
+                  <small class="text-light opacity-75">Live Auctions</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-card">
+                  <div class="fw-bold text-primary counter" data-target="99"
+                    style="font-size: 2.5rem; line-height: 1.2;">0</div>
+                  <small class="text-light opacity-75">% Satisfaction</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#completedCarousel" data-bs-slide="prev" aria-label="Previous">
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+          aria-label="Previous">
           <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#completedCarousel" data-bs-slide="next" aria-label="Next">
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+          aria-label="Next">
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-  <section id="bid" class="py-4 py-md-5 section-gradient">
-    <div class="container py-3 py-md-5">
-      <div class="row align-items-center g-4 g-lg-5">
-        <div class="col-lg-6">
-          <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Bid Now</span>
-          <h2 class="display-5 fw-bold text-white">Place Your <span class="text-primary">Bid</span></h2>
-          <p class="text-light opacity-50 mb-3 mb-md-4">Enter your details and bid amount below. Our system processes bids in real-time with instant confirmation.</p>
-          <div class="bid-features">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="feature-icon-sm"><i class="bi bi-shield-check text-primary"></i></div>
-              <div><h3 class="h6 text-white mb-0">Secure Bidding</h3><small class="text-light opacity-50">256-bit SSL encrypted</small></div>
-            </div>
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="feature-icon-sm"><i class="bi bi-lightning-charge text-primary"></i></div>
-              <div><h3 class="h6 text-white mb-0">Real-Time Updates</h3><small class="text-light opacity-50">Instant bid notifications</small></div>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-              <div class="feature-icon-sm"><i class="bi bi-wallet2 text-primary"></i></div>
-              <div><h3 class="h6 text-white mb-0">Easy Payments</h3><small class="text-light opacity-50">Multiple payment options</small></div>
+
+    <section id="categories" class="py-4 py-md-5 section-dark">
+      <div class="container py-3 py-md-5">
+        <div class="text-center mb-4 mb-md-5">
+          <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Categories</span>
+          <h2 class="display-5 fw-bold text-white">Explore Auction <span class="text-primary">Categories</span></h2>
+          <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">Browse through our curated
+            categories and find the perfect item to bid on.</p>
+        </div>
+        <div class="row g-3 g-md-4">
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="100">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/electronics.webp" alt="Electronics" class="rounded-circle" />
+              </div>
+              <h3 class="h6 text-white fw-semibold mb-0">Electronics</h3>
+              <small class="text-primary">234 Items</small>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="bid-form-card p-3 p-md-5">
-            <form id="bidForm" novalidate>
-              <div class="mb-3">
-                <label for="bidName" class="form-label text-light">Full Name</label>
-                <input type="text" class="form-control custom-input" id="bidName" name="name" placeholder="Ahmer Shah" autocomplete="name" required />
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="150">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/art.webp" alt="Art & Paintings" class="rounded-circle" />
               </div>
-              <div class="mb-3">
-                <label for="bidEmail" class="form-label text-light">Email Address</label>
-                <input type="email" class="form-control custom-input" id="bidEmail" name="email" placeholder="ahmershah@example.com" autocomplete="email" required />
+              <h3 class="h6 text-white fw-semibold mb-0">Art &amp; Paintings</h3>
+              <small class="text-primary">189 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="200">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/real-estate.webp" alt="Real Estate" class="rounded-circle" />
               </div>
-              <div class="mb-3">
-                <label for="bidItem" class="form-label text-light">Select Auction Item</label>
-                <select class="form-select custom-input" id="bidItem" name="item" required>
-                  <option value="" selected disabled>Choose an item...</option>
-                  <option value="Vintage Leica Camera">Vintage Leica Camera – Current: $4,250</option>
-                  <option value="Abstract Oil Painting">Abstract Oil Painting – Current: $12,800</option>
-                  <option value="4ct Diamond Ring">4ct Diamond Ring – Current: $38,500</option>
-                  <option value="1967 Ferrari 275 GTB">1967 Ferrari 275 GTB – Current: $2.4M</option>
-                  <option value="Signed Fender Stratocaster">Signed Fender Stratocaster – Current: $18,750</option>
-                  <option value="Bronze Sculpture">Bronze Sculpture – Current: $7,900</option>
-                </select>
+              <h3 class="h6 text-white fw-semibold mb-0">Real Estate</h3>
+              <small class="text-primary">76 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="250">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/vehicles.webp" alt="Vehicles" class="rounded-circle" />
               </div>
-              <div class="mb-3 mb-md-4">
-                <label for="bidAmount" class="form-label text-light">Your Bid Amount ($)</label>
-                <div class="input-group">
-                  <span class="input-group-text custom-input border-end-0"><i class="bi bi-currency-dollar"></i></span>
-                  <input type="number" class="form-control custom-input border-start-0" id="bidAmount" name="amount" placeholder="0.00" min="1" max="100000" required />
-                </div>
+              <h3 class="h6 text-white fw-semibold mb-0">Vehicles</h3>
+              <small class="text-primary">142 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="300">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/jewelry.webp" alt="Jewelry" class="rounded-circle" />
               </div>
-              <button type="submit" class="btn btn-primary w-100 btn-lg rounded-pill glow-btn">
-                <i class="bi bi-hammer me-2"></i> Submit Bid
-              </button>
-            </form>
-            
-            <div id="bidSuccess" class="text-center d-none mt-4">
-              <div class="success-icon mb-3"><i class="bi bi-check-circle-fill text-success display-1"></i></div>
-              <h4 class="text-white fw-bold">Bid Placed Successfully!</h4>
-              <p class="text-light opacity-50">You will receive a confirmation email shortly.</p>
+              <h3 class="h6 text-white fw-semibold mb-0">Jewelry</h3>
+              <small class="text-primary">310 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="350">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/fashion.webp" alt="Fashion" class="rounded-circle" />
+              </div>
+              <h3 class="h6 text-white fw-semibold mb-0">Fashion</h3>
+              <small class="text-primary">208 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="400">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/watches.webp" alt="Watches" class="rounded-circle" />
+              </div>
+              <h3 class="h6 text-white fw-semibold mb-0">Watches</h3>
+              <small class="text-primary">167 Items</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" -delay="450">
+            <div class="category-card text-center p-3 p-md-4">
+              <div class="category-icon mb-2 mb-md-3">
+                <img src="assets/images/categories/antiques.webp" alt="Antiques" class="rounded-circle" />
+              </div>
+              <h3 class="h6 text-white fw-semibold mb-0">Antiques</h3>
+              <small class="text-primary">95 Items</small>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-  <section id="about" class="py-4 py-md-5 section-dark">
-    <div class="container py-3 py-md-5">
-      <div class="row align-items-center g-4 g-lg-5">
-        <div class="col-lg-6">
-          <div class="about-img-wrapper">
-            <img src="assets/images/hero/hero-1.webp" alt="About AuctionsTable" class="about-img rounded-4" />
-            <div class="experience-badge">
-              <h3 class="text-white fw-bold mb-0">25+</h3>
-              <small class="text-light">Years Experience</small>
-            </div>
-          </div>
+    <section id="active-auctions" class="py-4 py-md-5 section-gradient">
+      <div class="container py-3 py-md-5">
+        <div class="text-center mb-4 mb-md-5">
+          <span class="badge bg-danger rounded-pill px-3 py-2 mb-2 pulse-badge">
+            <i class="bi bi-broadcast me-1"></i> LIVE
+          </span>
+          <h2 class="display-5 fw-bold text-white">Active <span class="text-primary">Auctions</span></h2>
+          <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">These items are live right now.
+            Place your bid before time runs out!</p>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">About Us</span>
-          <h2 class="display-5 fw-bold text-white">Trusted Auction <span class="text-primary">Platform</span></h2>
-          <p class="text-light opacity-75 mb-3 mb-md-4">AuctionsTable has been connecting buyers and sellers for over 25 years. We provide a transparent, secure, and exciting bidding experience for collectors, investors, and enthusiasts worldwide.</p>
-          <div class="row g-3 g-md-4 mb-3 mb-md-4">
-            <div class="col-6">
-              <div class="about-stat text-center p-2 p-md-3">
-                <h3 class="text-primary fw-bold mb-1">50K+</h3>
-                <small class="text-light opacity-50">Happy Customers</small>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="about-stat text-center p-2 p-md-3">
-                <h3 class="text-primary fw-bold mb-1">120+</h3>
-                <small class="text-light opacity-50">Countries Served</small>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="about-stat text-center p-2 p-md-3">
-                <h3 class="text-primary fw-bold mb-1">$500M+</h3>
-                <small class="text-light opacity-50">Total Sales</small>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="about-stat text-center p-2 p-md-3">
-                <h3 class="text-primary fw-bold mb-1">4.9★</h3>
-                <small class="text-light opacity-50">User Rating</small>
-              </div>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn-primary rounded-pill px-4 px-md-5 glow-btn"><i class="bi bi-arrow-right me-1"></i> Get In Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  
-  <section id="contact" class="py-4 py-md-5 section-gradient">
-    <div class="container py-3 py-md-5">
-      <div class="text-center mb-4 mb-md-5">
-        <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Contact</span>
-        <h2 class="display-5 fw-bold text-white">Get In <span class="text-primary">Touch</span></h2>
-        <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">Have questions? Reach out and our team will respond within 24 hours.</p>
-      </div>
-      <div class="row g-4 g-lg-5">
-        <div class="col-lg-4">
-          <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
-            <div class="d-flex align-items-center gap-3">
-              <div class="contact-icon"><i class="bi bi-geo-alt-fill text-primary"></i></div>
-              <div>
-                <h3 class="h6 text-white mb-1">Our Office</h3>
-                <small class="text-light opacity-50">123 Hyderabad, Pakistan</small>
-              </div>
-            </div>
-          </div>
-          <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
-            <div class="d-flex align-items-center gap-3">
-              <div class="contact-icon"><i class="bi bi-envelope-fill text-primary"></i></div>
-              <div>
-                <h3 class="h6 text-white mb-1">Email Us</h3>
-                <small class="text-light opacity-50">support@auctionstable.com</small>
-              </div>
-            </div>
-          </div>
-          <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
-            <div class="d-flex align-items-center gap-3">
-              <div class="contact-icon"><i class="bi bi-telephone-fill text-primary"></i></div>
-              <div>
-                <h3 class="h6 text-white mb-1">Call Us</h3>
-                <small class="text-light opacity-50">+92-326-3185-AUCTION</small>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
-            <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          </div>
+
+        <div class="d-flex gap-2 justify-content-center flex-wrap mb-4 mb-md-5">
+          <button class="btn btn-primary btn-sm rounded-pill px-3 px-md-4 filter-btn active"
+            data-filter="all">All</button>
+          <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn"
+            data-filter="electronics">Electronics</button>
+          <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn"
+            data-filter="art">Art</button>
+          <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn"
+            data-filter="jewelry">Jewelry</button>
+          <button class="btn btn-outline-light btn-sm rounded-pill px-3 px-md-4 filter-btn"
+            data-filter="vehicles">Vehicles</button>
         </div>
-        <div class="col-lg-8">
-          <div class="bid-form-card p-3 p-md-5">
-            <form id="contactForm" novalidate>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="contactName" class="form-label text-light">Full Name</label>
-                  <input type="text" class="form-control custom-input" id="contactName" placeholder="Your name" required />
+
+        <div class="row g-3 g-md-4" id="auctionGrid">
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="electronics" -delay="100">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/vintage-camera.webp" alt="Vintage Camera" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="2" data-minutes="15" data-seconds="30">02:15:30</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">Vintage Leica Camera</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">Rare 1960s Leica M3 in excellent condition with
+                  original lens.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$4,250</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">23</div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <label for="contactEmail" class="form-label text-light">Email</label>
-                  <input type="email" class="form-control custom-input" id="contactEmail" placeholder="you@example.com" required />
-                </div>
-                <div class="col-12">
-                  <label for="contactSubject" class="form-label text-light">Subject</label>
-                  <input type="text" class="form-control custom-input" id="contactSubject" placeholder="How can we help?" required />
-                </div>
-                <div class="col-12">
-                  <label for="contactMessage" class="form-label text-light">Message</label>
-                  <textarea class="form-control custom-input" id="contactMessage" rows="4" placeholder="Write your message..." required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4 px-md-5 glow-btn">
-                    <i class="bi bi-send me-2"></i> Send Message
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm btn-md-normal"
+                    data-bs-toggle="modal" data-bs-target="#itemModal" data-title="Vintage Leica Camera"
+                    data-img="assets/images/auctions/leica-camera-modal.webp" data-bid="$4,250"
+                    data-desc="Rare 1960s Leica M3 in excellent condition with original Summicron 50mm f/2 lens. Comes with original leather case and documentation. Serial number verified authentic.">
+                    <i class="bi bi-eye me-1"></i> View Details
                   </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
                 </div>
               </div>
-            </form>
-            <div id="contactSuccess" class="text-center d-none mt-4">
-              <i class="bi bi-check-circle-fill text-success display-3"></i>
-              <h5 class="text-white fw-bold mt-3">Message Sent!</h5>
-              <p class="text-light opacity-50">We'll get back to you within 24 hours.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  
-  <section id="disclaimer" class="py-4 py-md-5 section-dark">
-    <div class="container py-3 py-md-4">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="disclaimer-card p-3 p-md-5">
-            <div class="d-flex align-items-center gap-3 mb-3 mb-md-4">
-              <i class="bi bi-shield-exclamation text-warning fs-3 fs-md-2"></i>
-              <h3 class="text-white fw-bold mb-0">Disclaimer</h3>
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="art" -delay="200">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/abstract-painting.webp" alt="Abstract Painting" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="5" data-minutes="42" data-seconds="10">05:42:10</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">Abstract Oil Painting</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">Contemporary abstract art by renowned artist Marcus
+                  Wei.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$12,800</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">47</div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#itemModal" data-title="Abstract Oil Painting"
+                    data-img="assets/images/auctions/abstract-painting.webp" data-bid="$12,800"
+                    data-desc="Stunning large-scale abstract oil on canvas by Marcus Wei, 2024. Dimensions: 48x72 inches. Museum-quality piece with certificate of authenticity. Featured in Basel Art Fair 2024.">
+                    <i class="bi bi-eye me-1"></i> View Details
+                  </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
+                </div>
+              </div>
             </div>
-            <p class="text-light opacity-75 mb-3">This website is a <strong class="text-primary">demonstration project</strong> created for educational and portfolio purposes only. No actual auctions, transactions, or bidding processes take place on this platform.</p>
-            <ul class="text-light opacity-60 small">
-              <li class="mb-2">All auction items, prices, bids, and user data displayed are entirely fictional and for illustration purposes.</li>
-              <li class="mb-2">No real financial transactions are processed through this website.</li>
-              <li class="mb-2">Images used are sourced from Unsplash (royalty-free) and are used for demonstration only.</li>
-              <li class="mb-2">AuctionsTable does not guarantee the accuracy of any information presented on this site.</li>
-              <li class="mb-2">By using this website, you acknowledge that it is a non-commercial, non-functional demo.</li>
-            </ul>
-            <p class="text-light opacity-50 small mb-0 mt-3"><i class="bi bi-info-circle me-1"></i> For inquiries about this project, please use the contact form above.</p>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="jewelry" -delay="300">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/diamond-ring.webp" alt="Diamond Ring" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="1" data-minutes="8" data-seconds="55">01:08:55</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">4ct Diamond Ring</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">Platinum set, GIA certified, VS1 clarity, D color.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$38,500</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">61</div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#itemModal" data-title="4ct Diamond Ring"
+                    data-img="assets/images/auctions/diamond-ring.webp" data-bid="$38,500"
+                    data-desc="Exquisite 4.02 carat round brilliant diamond set in platinum. GIA Report: VS1 Clarity, D Color, Excellent Cut. Triple excellent. Includes GIA certificate and premium gift box.">
+                    <i class="bi bi-eye me-1"></i> View Details
+                  </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="vehicles" -delay="100">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/classic-car.webp" alt="Classic Car" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="8" data-minutes="30" data-seconds="0">08:30:00</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">1967 Ferrari 275 GTB</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">Fully restored classic Ferrari with matching
+                  numbers.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$2.4M</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">15</div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#itemModal" data-title="1967 Ferrari 275 GTB"
+                    data-img="assets/images/auctions/classic-car.webp" data-bid="$2,400,000"
+                    data-desc="Matching numbers 1967 Ferrari 275 GTB/4 in Rosso Corsa over Tan leather. Classiche certified. Concours-ready condition with complete history file. Previously exhibited at Pebble Beach.">
+                    <i class="bi bi-eye me-1"></i> View Details
+                  </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="electronics" -delay="200">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/signed-guitar.webp" alt="Signed Guitar" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="3" data-minutes="52" data-seconds="20">03:52:20</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">Signed Fender Stratocaster</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">Signed by Jimi Hendrix estate, limited edition.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$18,750</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">34</div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#itemModal" data-title="Signed Fender Stratocaster"
+                    data-img="assets/images/auctions/signed-guitar.webp" data-bid="$18,750"
+                    data-desc="Limited edition Fender Stratocaster with authenticated signature from the Jimi Hendrix estate. Sunburst finish, maple neck. Includes hardshell case and certificate of authenticity. #42 of 100.">
+                    <i class="bi bi-eye me-1"></i> View Details
+                  </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 auction-item" data-category="art" -delay="300">
+            <div class="auction-card">
+              <div class="auction-img-wrapper">
+                <img src="assets/images/auctions/sculpture.webp" alt="Sculpture" class="auction-img" />
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 m-md-3 pulse-badge"><i
+                    class="bi bi-broadcast me-1"></i>LIVE</span>
+                <div class="auction-timer" data-hours="6" data-minutes="11" data-seconds="45">06:11:45</div>
+                <button class="btn btn-sm btn-dark wishlist-btn position-absolute top-0 end-0 m-2 m-md-3"
+                  aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+              <div class="auction-body p-3 p-md-4">
+                <h3 class="h5 text-white fw-bold mb-1">Bronze Sculpture – The Thinker</h3>
+                <p class="text-light opacity-50 small mb-2 mb-md-3">19th-century authorized reproduction, Barbedienne
+                  foundry.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2 mb-md-3">
+                  <div>
+                    <small class="text-light opacity-50">Current Bid</small>
+                    <div class="text-primary fw-bold mb-0" style="font-size: 1.25rem;">$7,900</div>
+                  </div>
+                  <div class="text-end">
+                    <small class="text-light opacity-50">Total Bids</small>
+                    <div class="text-white mb-0" style="font-size: 1.125rem;">19</div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary flex-grow-1 rounded-pill glow-btn btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#itemModal" data-title="Bronze Sculpture – The Thinker"
+                    data-img="assets/images/auctions/sculpture.webp" data-bid="$7,900"
+                    data-desc="Authorized 19th-century bronze reproduction of Rodin's 'The Thinker' by Barbedienne foundry. Height: 28 inches. Foundry mark present. Provenance documented from a private European collection.">
+                    <i class="bi bi-eye me-1"></i> View Details
+                  </button>
+                  <a href="#bid" class="btn btn-outline-primary rounded-pill px-3 btn-sm">Bid</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark-card border-0">
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title text-white fw-bold" id="itemModalLabel">Item Details</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="" alt="Item Image" id="modalImg" class="w-100" style="max-height:350px;object-fit:cover;" />
+            <div class="p-3 p-md-4">
+              <h4 class="text-white fw-bold" id="modalTitle"></h4>
+              <p class="text-light opacity-75 mt-3" id="modalDesc"></p>
+              <hr class="border-secondary" />
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
+                <div>
+                  <small class="text-light opacity-50">Current Bid</small>
+                  <h3 class="text-primary fw-bold mb-0" id="modalBid"></h3>
+                </div>
+                <a href="#bid" class="btn btn-primary rounded-pill px-4 px-md-5 glow-btn" data-bs-dismiss="modal">
+                  <i class="bi bi-lightning-fill me-1"></i> Place Bid
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark-card border-0">
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title text-white fw-bold" id="loginModalLabel">Account Access</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-3 p-md-4">
+
+            <ul class="nav nav-pills mb-4 justify-content-center" id="authTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login-panel"
+                  type="button" role="tab">Login</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register-panel"
+                  type="button" role="tab">Register</button>
+              </li>
+            </ul>
+
+
+            <div class="tab-content" id="authTabContent">
+
+              <div class="tab-pane fade show active" id="login-panel" role="tabpanel">
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label for="loginEmail" class="form-label text-light small">Email Address</label>
+                    <input type="email" class="form-control custom-input" id="loginEmail" name="email"
+                      placeholder="your@email.com" autocomplete="email" required />
+                  </div>
+                  <div class="mb-3 password-field">
+                    <label for="loginPassword" class="form-label text-light small">Password</label>
+                    <div class="password-wrap">
+                      <input type="password" class="form-control custom-input password-input" id="loginPassword"
+                        name="password" placeholder="Enter password" required autocomplete="current-password"
+                        minlength="6" maxlength="20" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                  
+                    </div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" />
+                    <label class="form-check-label text-light small" for="rememberMe">Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                  </button>
+                  <p class="text-center text-light opacity-50 small mt-3 mb-0">
+                    <a href="#" class="text-primary text-decoration-none">Forgot password?</a>
+                  </p>
+                </form>
+              </div>
+
+
+              <div class="tab-pane fade" id="register-panel" role="tabpanel">
+                <form id="registerForm">
+                  <div class="mb-3">
+                    <label for="registerName" class="form-label text-light small">Full Name</label>
+                    <input type="text" class="form-control custom-input" id="registerName" name="name"
+                      placeholder="Ahmer Shah" autocomplete="name" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerEmail" class="form-label text-light small">Email Address</label>
+                    <input type="email" class="form-control custom-input" id="registerEmail" name="email"
+                      placeholder="your@email.com" autocomplete="email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerPhone" class="form-label text-light small">Phone Number</label>
+                    <input type="tel" class="form-control custom-input" id="registerPhone" name="phone"
+                      placeholder="+92 314 8396293" autocomplete="tel" required />
+                  </div>
+                  <div class="mb-3 password-field">
+                    <label for="registerPassword" class="form-label text-light small">Password</label>
+                    <div class="password-wrap">
+                      <input type="password" class="form-control custom-input password-input" id="registerPassword"
+                        name="password" placeholder="Create your password" required minlength="6" maxlength="20"
+                        autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&]).{6,}"
+                        title="Minimum 6 chars, 1 number, 1 capital, 1 special char" autocapitalize="off"
+                        autocorrect="off" spellcheck="false" />
+                    </div>
+
+                    <div class="progress mt-2" style="height:5px; display:none;">
+                      <div id="passwordStrength" class="progress-bar" role="progressbar" style="width:0%"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3 password-field">
+                    <label for="registerConfirmPassword" class="form-label text-light small">Confirm Password</label>
+                    <div class="password-wrap">
+                      <input type="password" class="form-control custom-input password-input"
+                        id="registerConfirmPassword" name="confirmPassword" placeholder="Confirm your password" required
+                        minlength="6" maxlength="20" autocomplete="new-password" autocapitalize="off" autocorrect="off"
+                        spellcheck="false" />
+                    </div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                    <label class="form-check-label text-light small" for="agreeTerms">
+                      I agree to the <a href="#disclaimer" class="text-primary text-decoration-none"
+                        data-bs-dismiss="modal">Terms & Conditions</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 rounded-pill glow-btn">
+                    <i class="bi bi-person-plus me-1"></i> Create Account
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section id="completed" class="py-4 py-md-5 section-dark">
+      <div class="container py-3 py-md-5">
+        <div class="text-center mb-4 mb-md-5">
+          <span class="badge bg-success bg-opacity-25 text-success rounded-pill px-3 py-2 mb-2">
+            <i class="bi bi-check-circle me-1"></i> Completed
+          </span>
+          <h2 class="display-5 fw-bold text-white">Recently <span class="text-primary">Completed</span></h2>
+          <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">These auctions have ended.
+            Check out the winning bids!</p>
+        </div>
+
+        <div id="completedCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3 g-md-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/rolex-watch.webp" alt="Rolex Watch" class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">Rolex Daytona 1969</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$245,000</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">j***n82</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/wine-collection.webp" alt="Wine Collection"
+                        class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">Chateau Lafite Collection</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$18,400</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">m***a55</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/nft-art.webp" alt="NFT Art" class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">Digital Art – Neon Dreams</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$5,200</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">k***z19</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row g-3 g-md-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/jordan-jersey.webp" alt="Basketball Memorabilia"
+                        class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">Signed Jordan Jersey</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$32,000</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">b***x44</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/toy-robot.webp" alt="Vintage Toy" class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-2 m-md-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">1950s Tin Robot Toy</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$3,800</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">r***t77</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="completed-card">
+                    <div class="completed-img-wrapper">
+                      <img src="assets/images/completed/great-gatsby-book.webp" alt="Rare Book" class="completed-img" />
+                      <span class="badge bg-success position-absolute top-0 start-0 m-3">SOLD</span>
+                    </div>
+                    <div class="p-3 p-md-4">
+                      <h3 class="h6 text-white fw-bold mb-0">First Edition – The Great Gatsby</h3>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div><small class="text-light opacity-50">Final Price</small><br /><span
+                            class="text-primary fw-bold">$162,500</span></div>
+                        <div class="text-end"><small class="text-light opacity-50">Winner</small><br /><span
+                            class="text-white">l***e03</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#completedCarousel" data-bs-slide="prev"
+            aria-label="Previous">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#completedCarousel" data-bs-slide="next"
+            aria-label="Next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="bid" class="py-4 py-md-5 section-gradient">
+      <div class="container py-3 py-md-5">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Bid Now</span>
+            <h2 class="display-5 fw-bold text-white">Place Your <span class="text-primary">Bid</span></h2>
+            <p class="text-light opacity-50 mb-3 mb-md-4">Enter your details and bid amount below. Our system processes
+              bids in real-time with instant confirmation.</p>
+            <div class="bid-features">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="feature-icon-sm"><i class="bi bi-shield-check text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-0">Secure Bidding</h3><small class="text-light opacity-50">256-bit SSL
+                    encrypted</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="feature-icon-sm"><i class="bi bi-lightning-charge text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-0">Real-Time Updates</h3><small class="text-light opacity-50">Instant bid
+                    notifications</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="feature-icon-sm"><i class="bi bi-wallet2 text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-0">Easy Payments</h3><small class="text-light opacity-50">Multiple payment
+                    options</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bid-form-card p-3 p-md-5">
+              <form id="bidForm" novalidate>
+                <div class="mb-3">
+                  <label for="bidName" class="form-label text-light">Full Name</label>
+                  <input type="text" class="form-control custom-input" id="bidName" name="name" placeholder="Ahmer Shah"
+                    autocomplete="name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="bidEmail" class="form-label text-light">Email Address</label>
+                  <input type="email" class="form-control custom-input" id="bidEmail" name="email"
+                    placeholder="ahmershah@example.com" autocomplete="email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="bidItem" class="form-label text-light">Select Auction Item</label>
+                  <select class="form-select custom-input" id="bidItem" name="item" required>
+                    <option value="" selected disabled>Choose an item...</option>
+                    <option value="Vintage Leica Camera">Vintage Leica Camera – Current: $4,250</option>
+                    <option value="Abstract Oil Painting">Abstract Oil Painting – Current: $12,800</option>
+                    <option value="4ct Diamond Ring">4ct Diamond Ring – Current: $38,500</option>
+                    <option value="1967 Ferrari 275 GTB">1967 Ferrari 275 GTB – Current: $2.4M</option>
+                    <option value="Signed Fender Stratocaster">Signed Fender Stratocaster – Current: $18,750</option>
+                    <option value="Bronze Sculpture">Bronze Sculpture – Current: $7,900</option>
+                  </select>
+                </div>
+                <div class="mb-3 mb-md-4">
+                  <label for="bidAmount" class="form-label text-light">Your Bid Amount <span
+                      class="text-danger">*</span> <small class="text-light opacity-50">(Min: $100 - Max:
+                      $100,000)</small></label>
+                  <div class="input-group">
+                    <button type="button" class="btn btn-outline-primary" id="decreaseBtn">
+                      <i class="bi bi-dash-lg"></i>
+                    </button>
+                    <span class="input-group-text custom-input border-end-0 border-start-0"><i
+                        class="bi bi-currency-dollar"></i></span>
+                    <input type="number" class="form-control custom-input border-start-0 border-end-0" id="bidAmount"
+                      name="amount" placeholder="0" min="100" max="100000" step="100" value="100" required />
+                    <button type="button" class="btn btn-outline-primary" id="increaseBtn">
+                      <i class="bi bi-plus-lg"></i>
+                    </button>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 btn-lg rounded-pill glow-btn">
+                  <i class="bi bi-hammer me-2"></i> Submit Bid
+                </button>
+              </form>
+
+              <div id="bidSuccess" class="alert alert-success d-none mt-4" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <strong>Success!</strong> Your bid has been placed successfully. You will receive a confirmation email
+                shortly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="py-4 py-md-5 section-dark">
+      <div class="container py-3 py-md-5">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <div class="about-img-wrapper">
+              <img src="assets/images/hero/hero-1.webp" alt="About AuctionsTable" class="about-img rounded-4" />
+              <div class="experience-badge">
+                <h3 class="text-white fw-bold mb-0">25+</h3>
+                <small class="text-light">Years Experience</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">About Us</span>
+            <h2 class="display-5 fw-bold text-white">Trusted Auction <span class="text-primary">Platform</span></h2>
+            <p class="text-light opacity-75 mb-3 mb-md-4">AuctionsTable has been connecting buyers and sellers for over
+              25 years. We provide a transparent, secure, and exciting bidding experience for collectors, investors, and
+              enthusiasts worldwide.</p>
+            <div class="row g-3 g-md-4 mb-3 mb-md-4">
+              <div class="col-6">
+                <div class="about-stat text-center p-2 p-md-3">
+                  <h3 class="text-primary fw-bold mb-1">50K+</h3>
+                  <small class="text-light opacity-50">Happy Customers</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="about-stat text-center p-2 p-md-3">
+                  <h3 class="text-primary fw-bold mb-1">120+</h3>
+                  <small class="text-light opacity-50">Countries Served</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="about-stat text-center p-2 p-md-3">
+                  <h3 class="text-primary fw-bold mb-1">$500M+</h3>
+                  <small class="text-light opacity-50">Total Sales</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="about-stat text-center p-2 p-md-3">
+                  <h3 class="text-primary fw-bold mb-1">4.9★</h3>
+                  <small class="text-light opacity-50">User Rating</small>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary rounded-pill px-4 px-md-5 glow-btn"><i
+                class="bi bi-arrow-right me-1"></i> Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="py-4 py-md-5 section-gradient">
+      <div class="container py-3 py-md-5">
+        <div class="text-center mb-4 mb-md-5">
+          <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 py-2 mb-2">Contact</span>
+          <h2 class="display-5 fw-bold text-white">Get In <span class="text-primary">Touch</span></h2>
+          <p class="text-light opacity-50 mx-auto px-2 px-md-0" style="max-width:550px;">Have questions? Reach out and
+            our team will respond within 24 hours.</p>
+        </div>
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4">
+            <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="contact-icon"><i class="bi bi-geo-alt-fill text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Our Office</h3>
+                  <small class="text-light opacity-50">123 Hyderabad, Pakistan</small>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="contact-icon"><i class="bi bi-envelope-fill text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Email Us</h3>
+                  <small class="text-light opacity-50">support@auctionstable.com</small>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-card p-3 p-md-4 mb-3 mb-md-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="contact-icon"><i class="bi bi-telephone-fill text-primary"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Call Us</h3>
+                  <small class="text-light opacity-50">+92-326-3185-AUCTION</small>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
+              <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank"
+                rel="noopener"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank"
+                rel="noopener"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram"
+                target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn"
+                target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="bid-form-card p-3 p-md-5">
+              <form id="contactForm" action="https://formspree.io/f/mvzbgryn" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label text-light">Your Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your name"
+                      required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label text-light">Your Email <span
+                        class="text-danger">*</span></label>
+                    <input type="email" class="form-control custom-input" id="email" name="email"
+                      placeholder="you@example.com" required />
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label text-light">Subject <span
+                        class="text-danger">*</span></label>
+                    <input type="text" class="form-control custom-input" id="subject" name="subject"
+                      placeholder="How can we help?" required />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label text-light">Your Message <span
+                        class="text-danger">*</span></label>
+                    <textarea class="form-control custom-input" id="message" name="message" rows="5"
+                      placeholder="Write your message..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4 px-md-5 glow-btn"
+                      id="submitBtn">
+                      <i class="bi bi-send me-2"></i> Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div id="successMsg" class="alert alert-success d-none mt-3" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <strong>Success!</strong> Your message has been sent successfully. We'll get back to you soon.
+              </div>
+              <div id="errorMsg" class="alert alert-danger d-none mt-3" role="alert">
+                <i class="bi bi-exclamation-circle-fill me-2"></i>
+                <strong>Error!</strong> Something went wrong. Please try again.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="disclaimer" class="py-4 py-md-5 section-dark">
+      <div class="container py-3 py-md-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="disclaimer-card p-3 p-md-5">
+              <div class="d-flex align-items-center gap-3 mb-3 mb-md-4">
+                <i class="bi bi-shield-exclamation text-warning fs-3 fs-md-2"></i>
+                <h3 class="text-white fw-bold mb-0">Disclaimer</h3>
+              </div>
+              <p class="text-light opacity-75 mb-3">This website is a <strong class="text-primary">demonstration
+                  project</strong> created for educational and portfolio purposes only. No actual auctions,
+                transactions, or bidding processes take place on this platform.</p>
+              <ul class="text-light opacity-60 small">
+                <li class="mb-2">All auction items, prices, bids, and user data displayed are entirely fictional and for
+                  illustration purposes.</li>
+                <li class="mb-2">No real financial transactions are processed through this website.</li>
+                <li class="mb-2">Images used are sourced from Unsplash (royalty-free) and are used for demonstration
+                  only.</li>
+                <li class="mb-2">AuctionsTable does not guarantee the accuracy of any information presented on this
+                  site.</li>
+                <li class="mb-2">By using this website, you acknowledge that it is a non-commercial, non-functional
+                  demo.</li>
+              </ul>
+              <p class="text-light opacity-50 small mb-0 mt-3"><i class="bi bi-info-circle me-1"></i> For inquiries
+                about this project, please use the contact form above.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
-  
+
   <footer class="footer-section pt-4 pt-md-5 pb-3">
     <div class="container">
       <div class="row g-4 mb-4 mb-md-5">
@@ -1023,12 +1191,17 @@
             <i class="bi bi-hammer fs-3 text-primary"></i>
             <span class="fs-4 fw-bold text-white">Auctions<span class="text-primary">Table</span></span>
           </a>
-          <p class="text-light opacity-50 small">The world's most trusted online auction platform. Connecting buyers and sellers since 2010 with secure, transparent bidding.</p>
+          <p class="text-light opacity-50 small">The world's most trusted online auction platform. Connecting buyers and
+            sellers since 2010 with secure, transparent bidding.</p>
           <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
-            <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/ahmershah29" class="social-circle" aria-label="Facebook" target="_blank"
+              rel="noopener"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.twitter.com/ahmershah29" class="social-circle" aria-label="Twitter" target="_blank"
+              rel="noopener"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/ahmershah29" class="social-circle" aria-label="Instagram" target="_blank"
+              rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/syedahmershah" class="social-circle" aria-label="LinkedIn"
+              target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
         <div class="col-6 col-lg-2">
@@ -1056,7 +1229,8 @@
           <p class="text-light opacity-50 small">Subscribe to get the latest auction updates and exclusive deals.</p>
           <form class="d-flex gap-2" id="newsletterForm">
             <label for="newsletterEmail" class="visually-hidden">Email Address</label>
-            <input type="email" class="form-control custom-input" id="newsletterEmail" name="email" placeholder="your@email.com" autocomplete="email" required />
+            <input type="email" class="form-control custom-input" id="newsletterEmail" name="email"
+              placeholder="your@email.com" autocomplete="email" required />
             <button class="btn btn-primary rounded-pill px-4 glow-btn" type="submit" aria-label="Subscribe">
               <i class="bi bi-send"></i>
             </button>
@@ -1071,16 +1245,17 @@
     </div>
   </footer>
 
-  
+
   <button id="scrollTopBtn" class="scroll-top-btn" title="Back to top">
     <i class="bi bi-arrow-up-short"></i>
   </button>
 
-  
+
   <script src="assets/js/jquery-3.7.1.min.js" defer></script>
-  
+
   <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-  
+
   <script src="assets/js/script.js" defer></script>
 </body>
+
 </html>

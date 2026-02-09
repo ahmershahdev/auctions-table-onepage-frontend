@@ -631,6 +631,32 @@ body {
   padding: 0.75rem 1rem;
   transition: var(--transition);
 }
+.password-field .password-wrap {
+  position: relative;
+}
+.password-input {
+  padding-right: 3rem;
+}
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 0.85rem;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: var(--transition);
+}
+.toggle-password:hover,
+.toggle-password.bi-eye-slash {
+  color: var(--primary);
+}
 .custom-input:focus {
   border-color: var(--primary) !important;
   box-shadow: 0 0 0 3px var(--primary-glow) !important;
@@ -675,6 +701,39 @@ body {
 }
 .input-group-text.custom-input {
   color: var(--primary) !important;
+}
+
+/* Hide default number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Bid Amount Increment/Decrement Buttons */
+.input-group .btn-outline-primary {
+  border-color: var(--border-color) !important;
+  color: var(--text-white) !important;
+  background: var(--bg-input);
+  transition: var(--transition);
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  min-width: 44px;
+}
+
+.input-group .btn-outline-primary:hover {
+  background: var(--primary);
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+.input-group .btn-outline-primary:active {
+  background: rgba(13, 110, 253, 0.8);
+  border-color: var(--primary) !important;
+  color: white !important;
 }
 
 
@@ -878,6 +937,41 @@ body {
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
   filter: brightness(1.4) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* Login Modal Styles */
+.nav-tabs-dark .nav-link {
+  border-bottom: 2px solid transparent;
+  color: rgba(240, 240, 245, 0.6) !important;
+  transition: var(--transition);
+}
+
+.nav-tabs-dark .nav-link:hover {
+  border-bottom-color: var(--primary);
+  color: var(--text-white) !important;
+}
+
+.nav-tabs-dark .nav-link.active {
+  border-bottom-color: var(--primary);
+  background: none;
+  color: var(--text-white) !important;
+}
+
+.modal-content {
+  box-shadow: 0 10px 40px rgba(13, 110, 253, 0.2);
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1161,6 +1255,15 @@ body {
     padding: 0.6rem 0.85rem;
     font-size: 0.875rem;
     border-radius: 10px !important;
+  }
+  .password-input {
+    padding-right: 2.6rem;
+  }
+  .toggle-password {
+    right: 0.65rem;
+    font-size: 1rem;
+    width: 28px;
+    height: 28px;
   }
   .disclaimer-card {
     padding: 1.25rem !important;

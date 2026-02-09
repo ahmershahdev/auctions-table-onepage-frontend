@@ -88,6 +88,8 @@
 - Contact information cards
 - Address, phone, email display
 - Social media links
+- **Formspree API integration** for backendless email delivery
+- **AJAX-powered submission** for instant feedback (success/error) without page reload
 
 #### 9. **Disclaimer**
 - Legal terms and conditions
@@ -398,6 +400,10 @@ This is a static website - no npm packages, no build process, no database setup 
 - Smooth scroll animation (600ms)
 - Fade in/out transitions
 
+### 12. **Contact Form AJAX + Formspree Integration**
+- The contact form uses [Formspree](https://formspree.io/) as a backendless email API.
+- Form submission is handled via jQuery AJAX, sending data to Formspree and displaying real-time success or error messages to the user.
+- No page reload is required; users receive instant feedback after submitting the form.
 ### 9. **Active Section Highlighting**
 - Updates nav link active state on scroll
 - Highlights current section in navigation
