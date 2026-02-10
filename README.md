@@ -16,7 +16,7 @@
 - [JavaScript Features](#javascript-features)
 - [Browser Support](#browser-support)
 - [Contact & Support](#contact--support)
-- [License](#license)
+- [License](LICENSE.txt)
 
 ---
 

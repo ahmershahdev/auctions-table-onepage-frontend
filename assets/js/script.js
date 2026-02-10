@@ -382,7 +382,6 @@ $(document).ready(function () {
     }
   });
 
-  // Password toggle functionality for all password fields
   $(document).on("click", ".toggle-password", function (e) {
     e.preventDefault();
     const $btn = $(this);
