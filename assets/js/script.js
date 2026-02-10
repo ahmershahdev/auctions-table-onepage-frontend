@@ -38,6 +38,8 @@ $(document).ready(function () {
     $("#premiumAlert").removeClass("show");
   };
 
+  $(".premium-alert-close").on("click", hidePremiumAlert);
+
   $(document).on("click", ".nav-link.mobile-link", function (e) {
     var target = $(this).attr("href");
     if (target && target.startsWith("#") && $(target).length) {
@@ -214,7 +216,15 @@ $(document).ready(function () {
     },
   );
 
-  $("#loginModal").on("hide.bs.modal", () => document.body.focus());
+  // Proper focus management for modals
+  $("#loginModal").on("hidden.bs.modal", function () {
+    // Focus on the button that triggered the modal
+    $("#loginBtn, #mobileMenu .nav-link[href='#login']").first().focus();
+  });
+
+  $("#itemModal").on("hidden.bs.modal", function () {
+    // Focus returns to the button that opened the modal (handled by Bootstrap)
+  });
   $("#loginBtn").on("click", () => {
     const offcanvasInstance = bootstrap.Offcanvas.getInstance(
       document.getElementById("mobileMenu"),
@@ -306,7 +316,13 @@ $(document).ready(function () {
     e.preventDefault();
     if ($("#registerPassword").val() !== $("#registerConfirmPassword").val()) {
       $("#errorMessage").text("Passwords must match.");
-      new bootstrap.Modal(document.getElementById("errorModal")).show();
+      const errorModal = new bootstrap.Modal(
+        document.getElementById("errorModal"),
+      );
+      errorModal.show();
+      $("#errorModal").on("hidden.bs.modal", function () {
+        $("#registerPassword").focus();
+      });
       return;
     }
     showPremiumAlert(
