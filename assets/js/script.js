@@ -248,13 +248,13 @@ $(document).ready(function () {
     let value = parseInt($input.val()) || 100;
     const isIncrease = $(this).attr("id") === "increaseBtn";
 
-    value = isIncrease ? Math.min(value + 1, 100000) : Math.max(value - 1, 100);
+    value = isIncrease ? Math.min(value + 1, 1000000) : Math.max(value - 1, 100);
     $input.val(value);
   });
 
   $("#bidAmount").on("change", function () {
     let value = parseInt($(this).val()) || 100;
-    $(this).val(Math.min(Math.max(value, 100), 100000));
+    $(this).val(Math.min(Math.max(value, 100), 1000000));
   });
 
   $("#bidBtn").on("click", function () {
