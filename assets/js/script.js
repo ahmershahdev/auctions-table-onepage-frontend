@@ -216,14 +216,12 @@ $(document).ready(function () {
     },
   );
 
-  // Proper focus management for modals
   $("#loginModal").on("hidden.bs.modal", function () {
-    // Focus on the button that triggered the modal
+
     $("#loginBtn, #mobileMenu .nav-link[href='#login']").first().focus();
   });
 
   $("#itemModal").on("hidden.bs.modal", function () {
-    // Focus returns to the button that opened the modal (handled by Bootstrap)
   });
   $("#loginBtn").on("click", () => {
     const offcanvasInstance = bootstrap.Offcanvas.getInstance(
