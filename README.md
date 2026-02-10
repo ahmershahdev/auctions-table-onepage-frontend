@@ -96,7 +96,21 @@
 - Platform policies
 - Liability information
 
-#### 10. **Navigation & Footer**
+#### 10. **Authentication Modals (Login & Register)**
+- **Login Modal**: Email and password fields for user access
+- **Register Modal**: Full registration form with validation
+  - Name, email, phone, password, confirm password fields
+  - Password strength indicator with progress bar
+  - Terms & Conditions checkbox
+- **Password Field Enhancements**:
+  - Eye icon toggle for password visibility on all 3 password fields
+  - Smooth icon transitions (eye ↔ eye-slash)
+  - Styled button with hover effects and scale animation
+  - Professional styling with blue accent background
+- **Lost Password**: Dedicated forgot password modal with email recovery
+- Tab-based UI switching between Login and Register
+
+#### 11. **Navigation & Footer**
 - Sticky navbar with active section highlighting
 - Offcanvas mobile menu (opens from left)
 - Comprehensive footer with links
@@ -400,10 +414,6 @@ This is a static website - no npm packages, no build process, no database setup 
 - Smooth scroll animation (600ms)
 - Fade in/out transitions
 
-### 12. **Contact Form AJAX + Formspree Integration**
-- The contact form uses [Formspree](https://formspree.io/) as a backendless email API.
-- Form submission is handled via jQuery AJAX, sending data to Formspree and displaying real-time success or error messages to the user.
-- No page reload is required; users receive instant feedback after submitting the form.
 ### 9. **Active Section Highlighting**
 - Updates nav link active state on scroll
 - Highlights current section in navigation
@@ -420,6 +430,22 @@ This is a static website - no npm packages, no build process, no database setup 
 - Closes on link click
 - Bootstrap offcanvas component
 - Full-screen overlay
+
+### 12. **Password Toggle Visibility**
+- Eye icon button in all password input fields
+- Toggle between password and text visibility
+- Smooth icon transitions (eye ↔ eye-slash)
+- Available on:
+  - Login password field
+  - Register password field
+  - Confirm password field
+- Styled button with hover effects and scale animation
+- Professional blue accent background with active states
+
+### 13. **Contact Form AJAX + Formspree Integration**
+- The contact form uses [Formspree](https://formspree.io/) as a backendless email API.
+- Form submission is handled via jQuery AJAX, sending data to Formspree and displaying real-time success or error messages to the user.
+- No page reload is required; users receive instant feedback after submitting the form.
 
 ---
 
@@ -515,12 +541,13 @@ Feel free to reach out for:
 ## 📊 Project Stats
 
 - **Total Sections**: 10
-- **HTML Lines**: 1089
-- **CSS Lines**: 1160+
-- **JavaScript Lines**: 232
-- **Animation Types**: 6+
+- **HTML Lines**: 1089+ (with password toggles)
+- **CSS Lines**: 1200+ (enhanced eye icon styling)
+- **JavaScript Lines**: 260+
+- **Animation Types**: 7+ (including password toggle transitions)
 - **Responsive Breakpoints**: 3
 - **Accessibility Features**: Multiple
+- **Interactive Features**: 12+
 
 ---
 
@@ -544,6 +571,7 @@ Potential features for future versions:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1.0 | Feb 10, 2026 | Added password visibility toggle with smooth animations |
 | 1.0.0 | Feb 8, 2026 | Initial release |
 
 ---
@@ -562,4 +590,4 @@ If you like this project, please:
 
 ---
 
-*Last Updated: February 8, 2026*
+*Last Updated: February 10, 2026*

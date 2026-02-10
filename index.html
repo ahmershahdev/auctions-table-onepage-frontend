@@ -690,7 +690,9 @@
                       <input type="password" class="form-control custom-input password-input" id="loginPassword"
                         name="password" placeholder="Enter password" required autocomplete="current-password"
                         minlength="6" maxlength="20" autocorrect="off" autocapitalize="off" spellcheck="false" />
-
+                      <button type="button" class="toggle-password" id="loginPasswordToggle" aria-label="Toggle password visibility">
+                        <i class="bi bi-eye"></i>
+                      </button>
                     </div>
                   </div>
                   <div class="form-check mb-3">
@@ -733,6 +735,9 @@
                         autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&]).{6,}"
                         title="Minimum 6 chars, 1 number, 1 capital, 1 special char" autocapitalize="off"
                         autocorrect="off" spellcheck="false" />
+                      <button type="button" class="toggle-password" id="registerPasswordToggle" aria-label="Toggle password visibility">
+                        <i class="bi bi-eye"></i>
+                      </button>
                     </div>
 
                     <div class="progress mt-2" style="height:5px; display:none;">
@@ -746,6 +751,9 @@
                         id="registerConfirmPassword" name="confirmPassword" placeholder="Confirm your password" required
                         minlength="6" maxlength="20" autocomplete="new-password" autocapitalize="off" autocorrect="off"
                         spellcheck="false" />
+                      <button type="button" class="toggle-password" id="confirmPasswordToggle" aria-label="Toggle password visibility">
+                        <i class="bi bi-eye"></i>
+                      </button>
                     </div>
                   </div>
                   <div class="form-check mb-3">

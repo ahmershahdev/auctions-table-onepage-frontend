@@ -381,4 +381,20 @@ $(document).ready(function () {
       $("#newsletterError").removeClass("d-none");
     }
   });
+
+  // Password toggle functionality for all password fields
+  $(document).on("click", ".toggle-password", function (e) {
+    e.preventDefault();
+    const $btn = $(this);
+    const $icon = $btn.find("i");
+    const $input = $btn.siblings(".password-input");
+
+    if ($input.attr("type") === "password") {
+      $input.attr("type", "text");
+      $icon.removeClass("bi-eye").addClass("bi-eye-slash");
+    } else {
+      $input.attr("type", "password");
+      $icon.removeClass("bi-eye-slash").addClass("bi-eye");
+    }
+  });
 });

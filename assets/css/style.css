@@ -794,23 +794,34 @@ body {
 .toggle-password {
   position: absolute;
   top: 50%;
-  right: 0.85rem;
+  right: 0.75rem;
   transform: translateY(-50%);
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  width: 32px;
-  height: 32px;
+  background: rgba(13, 110, 253, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(13, 110, 253, 0.15);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 3;
   transition: var(--transition);
+  font-weight: 500;
 }
 
-.toggle-password:hover,
-.toggle-password.bi-eye-slash {
+.toggle-password:hover {
+  background: rgba(13, 110, 253, 0.15);
+  border-color: rgba(13, 110, 253, 0.35);
   color: var(--primary);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.toggle-password:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .custom-input:focus {
@@ -877,6 +888,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .input-group .btn-outline-primary {
