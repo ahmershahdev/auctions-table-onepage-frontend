@@ -1,4 +1,3 @@
-# AuctionsTable Robots.txt
 User-agent: *
 Allow: /
 
